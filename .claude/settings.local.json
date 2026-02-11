@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for i in ml-model dashboard analytics pipeline cms-admin security-report fitness-app inventory wallet-ui workflow chat-ui video-player calendar ocr-processing payment-ui social-dashboard knowledge-base)",
+      "Bash(do echo \"<svg width=\"\"800\"\" height=\"\"600\"\" xmlns=\"\"http://www.w3.org/2000/svg\"\"><rect width=\"\"800\"\" height=\"\"600\"\" fill=\"\"#f8f9fa\"\"/><text x=\"\"400\"\" y=\"\"300\"\" font-family=\"\"Arial, sans-serif\"\" font-size=\"\"24\"\" fill=\"\"#6c757d\"\" text-anchor=\"\"middle\"\">Project Placeholder</text><text x=\"\"400\"\" y=\"\"340\"\" font-family=\"\"Arial, sans-serif\"\" font-size=\"\"16\"\" fill=\"\"#adb5bd\"\" text-anchor=\"\"middle\"\">Replace with actual project media</text></svg>\")",
+      "Bash(\"$i.jpg\")",
+      "Bash(done)",
+      "Bash(python:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

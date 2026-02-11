@@ -1,0 +1,50 @@
+[build]
+  # Build command - generate data files from resume
+  command = "python backend/scripts/generate_content.py"
+  # Publish directory - static frontend files
+  publish = "frontend"
+  # Functions directory - serverless functions
+  functions = "netlify/functions"
+
+[build.environment]
+  # Python version for Netlify Functions
+  PYTHON_VERSION = "3.9"
+
+[[redirects]]
+  # SPA-style redirects for client-side routing
+  from = "/project.html"
+  to = "/project.html"
+  status = 200
+
+[[redirects]]
+  # Redirect root to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {path = "!/.netlify/*", path = "!/assets/*", path = "!/media/*", path = "!/project.html"}
+
+[[headers]]
+  # Cache static assets
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Cache media files
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Security headers
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[functions]
+  # Python runtime for functions
+  node_bundler = "none"

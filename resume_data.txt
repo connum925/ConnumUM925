@@ -1,0 +1,142 @@
+============================================================
+RESUME VERSION 1 (No phone; contact only email/links)
+============================================================
+
+NAME
+Connor Urbano Mendoza
+
+CONTACT
+Email: connor.jbszz@gmail.com
+LinkedIn: linkedin.com/in/connum925
+GitHub: github.com/connum925
+
+SKILLS
+Languages (proficient): JavaScript, Java, C, C++, C#, Python, TypeScript, HTML/CSS
+Languages (familiar): PHP, SQL, Kotlin
+
+Tools: Git, Figma, VS Code, MS Azure, Visual Studio, IntelliJ, NetBeans, MongoDB, Google Cloud, Amazon Web Services, Informatica PowerCenter, Snowflake, Alteryx, Datadog, Android Studio, ESP, Docker
+
+Frameworks: Node.js/React, Angular, Bootstrap 5, Laravel, Flutter
+
+Interpersonal Skills: Public Speaking, Adaptable, Collaborative, Patient, Leadership, Teamwork, Problem solving
+
+WORK EXPERIENCE
+Thomson Reuters MX — Data Analyst Intern
+Dates: 02/2025 – Present
+Bullets:
+- Optimized operational workflows by executing IPC monitoring, L2 incident resolution (priority 4-5), and Tableau data validation, enabling senior analysts to focus on strategic initiatives while maintaining service continuity.
+- Engineered Python-ServiceNow API creating automated historical database with real-time ticket tracking that boosted team productivity and enhancing trend analysis capabilities for data-driven decision-making.
+- Exceeded performance benchmarks by consistently maintaining 85%+ work utilization rate through proactive task management, process optimization, and time allocation across multiple operational responsibilities.
+- Executed rigorous monitoring shifts for active Salesforce jobs, proactively identifying and preventing potential issues to achieve an 8% reduction in incident production.
+
+PERSONAL PROJECTS & LEADERSHIP
+Project: Simple File Explorer
+Tech: Kotlin, Android Studio, XML
+Dates: Jan 18 2025 – Mar 10 2025
+Bullets:
+- Developed a Kotlin Android file explorer enabling intuitive directory navigation and local file access.
+- Implemented versatile viewers for common file types (images, text, PDF) to allow convenient content previews.
+- Engineered basic DOCX viewing via HTML conversion and added theme support, enhancing usability and personalization.
+
+Project: FLUVI Traffic Simulator
+Tech: Javascript, HTML, CSS, C++
+Dates: Dic 10 2024 – APR 10 2025
+Bullets:
+- Developed a cellular automata (ECA 108) traffic simulator, to model local traffic flows and aid logistical planning.
+- Enabled simulation of diverse traffic scenarios (e.g., closures, obstructions) to proactively assess impacts on traffic patterns.
+- Generated actionable simulation data from various use cases, enabling cost-efficient, data-driven traffic management decisions.
+
+Project: Sweet Style
+Tech: React, Node.js, Javascript, Java, Python, MySql
+Dates: Jan 25 2024 – Nov 20 2024
+Bullets:
+- Developed an integrated E-commerce and POS platform to unify online and physical retail operations.
+- Engineered core E-commerce/POS features for seamless cross-channel sales processing and synchronized inventory management.
+- Optimized logistics by integrating online/POS data, achieving reduced operational costs and significantly boosting productivity in order fulfillment.
+
+EDUCATION
+Instituto Politécnico Nacional — Escuela Superior de Cómputo (ESCOM)
+Location: CDMX, MX
+Dates: August 2021 – Dic 2025
+Degree: Bachelor of Computer Systems Engineering
+Tech. Certificate: Aeronautics
+Overall GPA: 3.0
+Programming Coursework: OOP, Data Structures and Algorithms, DB, Operating Systems, Design and Analysis of Algorithms, Artificial Intelligence, Mobile App Development, Software Engineering, UX/UI, Object-Oriented Programming
+
+CERTIFICATES
+- Generative AI & LLM — Google Cloud México — Aug 2024 - Dic 2024
+- Career Essentials in Software Development — Microsoft — Feb 2025 – Mar 2025
+- Programming Foundations: Beyond the Fundamentals — LinkedIn Learning — Jan 2025 – Mar 2025
+
+
+============================================================
+RESUME VERSION 2 (No phone; contact only email/links)
+============================================================
+
+NAME
+Connor Urbano Mendoza
+
+CONTACT
+Email: connor.jbszz@gmail.com
+LinkedIn: linkedin.com/in/connum925
+GitHub: github.com/connum925
+
+SKILLS
+Languages (proficient): JavaScript, Java, C, C++, C#, Python, TypeScript, HTML/CSS
+Languages (familiar): PHP, SQL, Kotlin
+
+Tools: Git, Figma, VS Code, MS Azure, Visual Studio, IntelliJ, NetBeans, MongoDB, Google Cloud, Amazon Web Services, Informatica PowerCenter, Snowflake, Alteryx, Datadog, Android Studio, ESP, Docker
+
+Frameworks: Node.js/React, Angular, Bootstrap 5, Laravel, Flutter
+
+AI/ML Technologies:
+- LLM Models: GPT/OpenAI, Claude, Gemini, LLaMA, DeepSeek
+- BYOD (Bring Your Own Data)
+- AI Integrations: Microsoft Teams, SharePoint, AWS S3
+- Prompt Engineering
+- RAG Systems
+
+Interpersonal Skills: Public Speaking, Adaptable, Collaborative, Patient, Leadership, Teamwork, Problem solving
+
+WORK EXPERIENCE
+Thomson Reuters MX — Data Analyst Intern
+Dates: 02/2025 – Present
+Bullets:
+- Architected and deployed enterprise AI solutions integrating multiple LLM models (OpenAI GPT, Claude, Gemini, LLaMA, DeepSeek) with internal systems including Microsoft Teams, SharePoint, and AWS S3 buckets to streamline business processes.
+- Implemented BYOD (Bring Your Own Data) frameworks enabling secure integration of proprietary datasets with AI models, facilitating custom solutions for legal, Boomi, Alteryx, Print, HR, and other departments.
+- Delivered cross-functional AI support by analyzing requirements, resolving technical tickets, and developing tailored AI integrations to optimize workflows for both internal stakeholders/external clients, reducing processing time of each business case.
+- Optimized operational workflows by executing IPC monitoring, L2 incident resolution (priority 4-5), and Tableau data validation, enabling senior analysts to focus on strategic initiatives while maintaining service continuity.
+- Engineered Python-ServiceNow API creating automated historical database with real-time ticket tracking that boosted team productivity and enhancing trend analysis capabilities for data-driven decision-making.
+- Exceeded performance benchmarks by consistently maintaining 85%+ work utilization rate through proactive task management, process optimization, and time allocation across multiple operational responsibilities.
+- Executed rigorous monitoring shifts for active Salesforce jobs, proactively identifying and preventing potential issues to achieve an 8% reduction in incident production.
+
+PERSONAL PROJECTS & LEADERSHIP
+Project: Simple File Explorer
+Tech: Kotlin, Android Studio, XML
+Dates: Jan 18 2025 – Mar 10 2025
+Bullets:
+- Developed a Kotlin Android file explorer enabling intuitive directory navigation and local file access.
+- Implemented versatile viewers for common file types (images, text, PDF) to allow convenient content previews.
+- Engineered basic DOCX viewing via HTML conversion and added theme support, enhancing usability.
+
+Project: FLUVI Traffic Simulator
+Tech: Javascript, HTML, CSS, C++
+Dates: Dic 10 2024 – APR 10 2025
+Bullets:
+- Developed a cellular automata (ECA 108) traffic simulator, to model local traffic flows and aid logistical planning.
+- Enabled simulation of diverse traffic scenarios to proactively assess impacts on traffic patterns.
+- Generated actionable simulation data from various use cases, enabling cost-efficient, data-driven traffic management decisions.
+
+EDUCATION
+Instituto Politécnico Nacional — Escuela Superior de Cómputo (ESCOM)
+Location: CDMX, MX
+Dates: August 2021 – Dic 2025
+Degree: Bachelor of Computer Systems Engineering
+Tech. Certificate: Aeronautics
+Overall GPA: 3.0
+Programming Coursework: OOP, Data Structures and Algorithms, DB, Operating Systems, Design and Analysis of Algorithms, Artificial Intelligence, Mobile App Development, Software Engineering, UX/UI, Object-Oriented Programming
+
+CERTIFICATES
+- Generative AI & LLM — Google Cloud México — Aug 2024 - Dic 2024
+- Career Essentials in Software Development — Microsoft — Feb 2025 – Mar 2025
+- Programming Foundations: Beyond the Fundamentals — LinkedIn Learning — Jan 2025 – Mar 2025
