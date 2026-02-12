@@ -20,13 +20,19 @@ const translations = {
         },
         about: {
             title: "About Me",
-            galleryTitle: "A Glimpse Into My World",
+            galleryTitle: "A Glimpse Into Me",
             imageAlt1: "Personal photo 1",
             imageAlt2: "Personal photo 2",
             imageAlt3: "Personal photo 3",
             imageCaption1: "Exploring new technologies",
             imageCaption2: "In my element",
             imageCaption3: "Always learning",
+            videoAlt1: "Personal video 1",
+            videoAlt2: "Personal video 2",
+            videoAlt3: "Personal video 3",
+            videoCaption1: "In action",
+            videoCaption2: "My journey",
+            videoCaption3: "At work",
             imagePlaceholder: "Image not provided"
         },
         skills: {
@@ -61,26 +67,11 @@ const translations = {
         },
         contact: {
             title: "Get In Touch",
-            infoTitle: "Contact Information",
+            subtitle: "Let's connect! Feel free to reach out through any of these channels.",
             email: "Email",
-            form: {
-                name: "Name",
-                namePlaceholder: "Your name",
-                nameError: "Please enter your name (at least 2 characters).",
-                email: "Email",
-                emailPlaceholder: "your.email@example.com",
-                emailError: "Please enter a valid email address.",
-                subject: "Subject",
-                subjectPlaceholder: "What is this regarding?",
-                subjectError: "Please enter a subject (at least 3 characters).",
-                message: "Message",
-                messagePlaceholder: "Your message...",
-                messageError: "Please enter a message (at least 10 characters).",
-                submit: "Send Message",
-                submitting: "Sending...",
-                success: "Thank you for your message! I will get back to you soon.",
-                error: "There was an error sending your message. Please try again or email me directly."
-            }
+            emailDesc: "Best for professional inquiries",
+            linkedinDesc: "Connect and view my professional profile",
+            githubDesc: "Explore my code and repositories"
         },
         project: {
             back: "Back to Projects",
@@ -92,11 +83,13 @@ const translations = {
             timeline: "Project Timeline",
             links: "Project Links",
             media: "Project Media",
-            description: "Description"
+            description: "Description",
+            structure: "Project Architecture"
         },
         footer: {
             rights: "All rights reserved.",
-            built: "Built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5"
+            built: "Built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5",
+            viewMore: "View More"
         }
     },
     es: {
@@ -115,13 +108,19 @@ const translations = {
         },
         about: {
             title: "Acerca de Mí",
-            galleryTitle: "Un Vistazo a Mi Mundo",
+            galleryTitle: "Un Vistazo de Mi",
             imageAlt1: "Foto personal 1",
             imageAlt2: "Foto personal 2",
             imageAlt3: "Foto personal 3",
             imageCaption1: "Explorando nuevas tecnologías",
             imageCaption2: "En mi elemento",
             imageCaption3: "Siempre aprendiendo",
+            videoAlt1: "Video personal 1",
+            videoAlt2: "Video personal 2",
+            videoAlt3: "Video personal 3",
+            videoCaption1: "En acción",
+            videoCaption2: "Mi trayectoria",
+            videoCaption3: "En el trabajo",
             imagePlaceholder: "Imagen no disponible"
         },
         skills: {
@@ -156,26 +155,11 @@ const translations = {
         },
         contact: {
             title: "Contáctame",
-            infoTitle: "Información de Contacto",
+            subtitle: "¡Conectemos! No dudes en contactarme a través de cualquiera de estos canales.",
             email: "Correo Electrónico",
-            form: {
-                name: "Nombre",
-                namePlaceholder: "Tu nombre",
-                nameError: "Por favor ingresa tu nombre (al menos 2 caracteres).",
-                email: "Correo Electrónico",
-                emailPlaceholder: "tu.correo@ejemplo.com",
-                emailError: "Por favor ingresa un correo electrónico válido.",
-                subject: "Asunto",
-                subjectPlaceholder: "¿De qué se trata?",
-                subjectError: "Por favor ingresa un asunto (al menos 3 caracteres).",
-                message: "Mensaje",
-                messagePlaceholder: "Tu mensaje...",
-                messageError: "Por favor ingresa un mensaje (al menos 10 caracteres).",
-                submit: "Enviar Mensaje",
-                submitting: "Enviando...",
-                success: "¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.",
-                error: "Hubo un error al enviar tu mensaje. Por favor intenta nuevamente o contáctame directamente por correo."
-            }
+            emailDesc: "Ideal para consultas profesionales",
+            linkedinDesc: "Conéctate y ve mi perfil profesional",
+            githubDesc: "Explora mi código y repositorios"
         },
         project: {
             back: "Volver a Proyectos",
@@ -187,11 +171,13 @@ const translations = {
             timeline: "Línea de Tiempo del Proyecto",
             links: "Enlaces del Proyecto",
             media: "Medios del Proyecto",
-            description: "Descripción"
+            description: "Descripción",
+            structure: "Arquitectura del Proyecto"
         },
         footer: {
             rights: "Todos los derechos reservados.",
-            built: "Construido con HTML5, CSS3, JavaScript Vanilla y Bootstrap 5"
+            built: "Construido con HTML5, CSS3, JavaScript Vanilla y Bootstrap 5",
+            viewMore: "Ver Más"
         }
     }
 };

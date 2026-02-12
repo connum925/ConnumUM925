@@ -451,7 +451,7 @@ def generate_certificates():
     print("Generated certificates.json")
 
 def generate_projects():
-    """Generate projects.json with 3 real + 17 placeholder projects"""
+    """Generate projects.json with 5 real + 15 placeholder projects"""
     projects = [
         # Real project 1
         {
@@ -472,23 +472,35 @@ def generate_projects():
             "technologies": ["React", "Node.js", "JavaScript", "Java", "Python", "MySQL"],
             "startDate": "2024-01",
             "endDate": "2024-11",
-            "featured": True,
+            "featured": False,
             "media": [
                 {
                     "type": "image",
-                    "src": "/media/projects/sweet-style/screenshot-1.jpg",
+                    "src": "/media/projects/sweet-style/ss1.jpeg",
                     "alt": {
-                        "en": "Sweet Style dashboard interface",
-                        "es": "Interfaz del panel de Sweet Style"
+                        "en": "Sweet Style platform interface",
+                        "es": "Interfaz de la plataforma Sweet Style"
                     },
                     "caption": {
-                        "en": "Unified dashboard for inventory and sales management",
-                        "es": "Panel unificado para gestión de inventario y ventas"
+                        "en": "E-commerce and POS unified interface",
+                        "es": "Interfaz unificada de E-commerce y POS"
+                    }
+                },
+                {
+                    "type": "image",
+                    "src": "/media/projects/sweet-style/ss2.jpeg",
+                    "alt": {
+                        "en": "Sweet Style inventory management",
+                        "es": "Gestión de inventario de Sweet Style"
+                    },
+                    "caption": {
+                        "en": "Real-time inventory synchronization across channels",
+                        "es": "Sincronización de inventario en tiempo real entre canales"
                     }
                 }
             ],
             "links": {
-                "github": None,
+                "github": "https://github.com/connum925/Google-StreetMapsAPP_AndoridStudio",
                 "demo": None,
                 "caseStudy": None
             }
@@ -512,11 +524,11 @@ def generate_projects():
             "technologies": ["JavaScript", "HTML", "CSS", "C++"],
             "startDate": "2024-12",
             "endDate": "2025-04",
-            "featured": True,
+            "featured": False,
             "media": [
                 {
                     "type": "image",
-                    "src": "/media/projects/fluvi-traffic/simulation-view.jpg",
+                    "src": "/media/projects/fluvi-traffic/simulation-view.png",
                     "alt": {
                         "en": "Traffic simulation in progress",
                         "es": "Simulación de tráfico en progreso"
@@ -527,21 +539,21 @@ def generate_projects():
                     }
                 },
                 {
-                    "type": "video",
-                    "src": "/media/projects/fluvi-traffic/demo.mp4",
+                    "type": "image",
+                    "src": "/media/projects/fluvi-traffic/simulation-view2.png",
                     "alt": {
-                        "en": "FLUVI simulator demonstration",
-                        "es": "Demostración del simulador FLUVI"
+                        "en": "FLUVI simulator interface",
+                        "es": "Interfaz del simulador FLUVI"
                     },
                     "caption": {
-                        "en": "Interactive demonstration of traffic scenario simulation",
-                        "es": "Demostración interactiva de simulación de escenarios de tráfico"
+                        "en": "Interactive traffic scenario simulation interface",
+                        "es": "Interfaz interactiva de simulación de escenarios de tráfico"
                     }
                 }
             ],
             "links": {
                 "github": None,
-                "demo": None,
+                "demo": "https://fluvi.netlify.app/",
                 "caseStudy": None
             }
         },
@@ -564,58 +576,19 @@ def generate_projects():
             "technologies": ["Kotlin", "Android Studio", "XML"],
             "startDate": "2025-01",
             "endDate": "2025-03",
-            "featured": True,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/file-explorer/app-screen.jpg",
-                    "alt": {
-                        "en": "File explorer main interface",
-                        "es": "Interfaz principal del explorador de archivos"
-                    },
-                    "caption": {
-                        "en": "Clean and intuitive file browsing interface",
-                        "es": "Interfaz limpia e intuitiva para explorar archivos"
-                    }
-                }
-            ],
-            "links": {
-                "github": None,
-                "demo": None,
-                "caseStudy": None
-            }
-        },
-        # Placeholder projects 4-20
-        {
-            "id": "placeholder-api-gateway",
-            "slug": "api-gateway-microservices",
-            "title": {
-                "en": "API Gateway for Microservices [Placeholder]",
-                "es": "Gateway API para Microservicios [Marcador]"
-            },
-            "summary": {
-                "en": "Scalable API gateway implementation for managing microservices communication and authentication. (Sample project for demonstration purposes)",
-                "es": "Implementación de gateway API escalable para gestionar comunicación de microservicios y autenticación. (Proyecto de ejemplo con fines demostrativos)"
-            },
-            "description": {
-                "en": "This is a placeholder project demonstrating a potential API gateway architecture. The actual implementation would involve building a centralized gateway to route requests, handle authentication, and manage rate limiting across distributed microservices.",
-                "es": "Este es un proyecto marcador que demuestra una arquitectura potencial de gateway API. La implementación real involucraría construir un gateway centralizado para enrutar solicitudes, manejar autenticación y gestionar limitación de tasa entre microservicios distribuidos."
-            },
-            "technologies": ["Node.js", "Express", "Redis", "JWT", "Docker"],
-            "startDate": "2024-06",
-            "endDate": "2024-08",
             "featured": False,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/architecture-diagram.jpg",
+                    "type": "youtube",
+                    "src": "https://www.youtube.com/watch?v=315d02IqAfw",
+                    "videoId": "315d02IqAfw",
                     "alt": {
-                        "en": "API Gateway architecture diagram",
-                        "es": "Diagrama de arquitectura del Gateway API"
+                        "en": "File Explorer App Demonstration",
+                        "es": "Demostración de la App Explorador de Archivos"
                     },
                     "caption": {
-                        "en": "Microservices communication flow",
-                        "es": "Flujo de comunicación de microservicios"
+                        "en": "Complete walkthrough of the file explorer features",
+                        "es": "Recorrido completo de las características del explorador de archivos"
                     }
                 }
             ],
@@ -625,114 +598,106 @@ def generate_projects():
                 "caseStudy": None
             }
         },
+        # Real project 5
         {
-            "id": "placeholder-ml-classifier",
-            "slug": "image-classification-ml",
+            "id": "book-discovery-app",
+            "slug": "book-discovery-firebase",
             "title": {
-                "en": "Image Classification ML Model [Placeholder]",
-                "es": "Modelo ML de Clasificación de Imágenes [Marcador]"
+                "en": "Book Discovery and User Authentication App",
+                "es": "App de Descubrimiento de Libros y Autenticación de Usuario"
             },
             "summary": {
-                "en": "Machine learning model for automated image classification and tagging. (Sample project for demonstration purposes)",
-                "es": "Modelo de aprendizaje automático para clasificación y etiquetado automatizado de imágenes. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Android application enabling book discovery via Open Library API with Firebase-powered user authentication and personalized favorites management system.",
+                "es": "Aplicación Android que permite descubrir libros mediante Open Library API con autenticación de usuario mediante Firebase y sistema de gestión de favoritos personalizado."
             },
             "description": {
-                "en": "This placeholder project represents a potential machine learning solution for automated image classification. It would leverage convolutional neural networks to categorize images and generate descriptive tags automatically.",
-                "es": "Este proyecto marcador representa una solución potencial de aprendizaje automático para clasificación automatizada de imágenes. Aprovecharía redes neuronales convolucionales para categorizar imágenes y generar etiquetas descriptivas automáticamente."
+                "en": "Developed a comprehensive Android book discovery application integrating the Open Library API for real-time book searching and Firebase Realtime Database for secure user authentication and data persistence. Implemented key features including user sign-up and login functionality, keyword-based book search with detailed information display (title, author, cover, description), and personalized favorites management with add/remove capabilities. Built with modern Android architecture using Kotlin, Retrofit for API integration, Glide for image loading, and AndroidX components including ViewModel and LiveData for lifecycle-aware data management. Features an intuitive navigation drawer interface for seamless access to Home and Favorites sections, with complete session management and logout functionality.",
+                "es": "Desarrollé una aplicación Android integral de descubrimiento de libros integrando Open Library API para búsqueda de libros en tiempo real y Firebase Realtime Database para autenticación segura de usuarios y persistencia de datos. Implementé características clave incluyendo funcionalidad de registro e inicio de sesión de usuarios, búsqueda de libros por palabras clave con visualización detallada de información (título, autor, portada, descripción), y gestión personalizada de favoritos con capacidades de agregar/eliminar. Construida con arquitectura moderna de Android usando Kotlin, Retrofit para integración de API, Glide para carga de imágenes, y componentes AndroidX incluyendo ViewModel y LiveData para gestión de datos consciente del ciclo de vida. Presenta una interfaz intuitiva de cajón de navegación para acceso fluido a secciones de Inicio y Favoritos, con gestión completa de sesión y funcionalidad de cierre de sesión."
             },
-            "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
-            "startDate": "2024-03",
-            "endDate": "2024-05",
-            "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/ml-model.jpg",
-                    "alt": {
-                        "en": "Model training visualization",
-                        "es": "Visualización de entrenamiento del modelo"
-                    },
-                    "caption": {
-                        "en": "Neural network training progress",
-                        "es": "Progreso de entrenamiento de red neuronal"
-                    }
-                }
-            ],
-            "links": {
-                "github": None,
-                "demo": None,
-                "caseStudy": None
-            }
-        },
-        {
-            "id": "placeholder-iot-dashboard",
-            "slug": "iot-monitoring-dashboard",
-            "title": {
-                "en": "IoT Monitoring Dashboard [Placeholder]",
-                "es": "Panel de Monitoreo IoT [Marcador]"
-            },
-            "summary": {
-                "en": "Real-time monitoring dashboard for IoT sensor data visualization and alerting. (Sample project for demonstration purposes)",
-                "es": "Panel de monitoreo en tiempo real para visualización de datos de sensores IoT y alertas. (Proyecto de ejemplo con fines demostrativos)"
-            },
-            "description": {
-                "en": "This placeholder demonstrates a potential IoT monitoring solution featuring real-time data collection from distributed sensors, visualization dashboards, and intelligent alerting mechanisms for anomaly detection.",
-                "es": "Este marcador demuestra una solución potencial de monitoreo IoT con recolección de datos en tiempo real de sensores distribuidos, paneles de visualización y mecanismos inteligentes de alerta para detección de anomalías."
-            },
-            "technologies": ["JavaScript", "D3.js", "MQTT", "InfluxDB", "Grafana"],
+            "technologies": ["Kotlin", "Android SDK", "Firebase Realtime Database", "Retrofit", "Gson", "Glide", "AndroidX", "ViewModel", "LiveData", "Open Library API"],
             "startDate": "2024-09",
             "endDate": "2024-11",
             "featured": False,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/dashboard.jpg",
+                    "type": "youtube",
+                    "src": "https://www.youtube.com/watch?v=b7QrIK_NID4",
+                    "videoId": "b7QrIK_NID4",
                     "alt": {
-                        "en": "IoT dashboard interface",
-                        "es": "Interfaz del panel IoT"
+                        "en": "Book Discovery App Complete Demonstration",
+                        "es": "Demostración Completa de App de Descubrimiento de Libros"
                     },
                     "caption": {
-                        "en": "Real-time sensor data visualization",
-                        "es": "Visualización de datos de sensores en tiempo real"
+                        "en": "Full walkthrough of authentication, book search, and favorites management features",
+                        "es": "Recorrido completo de características de autenticación, búsqueda de libros y gestión de favoritos"
                     }
                 }
             ],
+            "links": {
+                "github": "https://github.com/connum925/Rest-API-PM5",
+                "demo": None,
+                "caseStudy": None
+            }
+        },
+        # Placeholder projects 5-20
+        {
+            "id": "tr-ml-classifier",
+            "slug": "image-classification-ml",
+            "title": {
+                "en": "Image Classification ML Model",
+                "es": "Modelo ML de Clasificación de Imágenes"
+            },
+            "summary": {
+                "en": "Machine learning model for automated image classification and tagging.",
+                "es": "Modelo de aprendizaje automático para clasificación y etiquetado automatizado de imágenes."
+            },
+            "description": {
+                "en": "Developed an enterprise-grade machine learning solution for automated image classification at Thomson Reuters. The system leverages convolutional neural networks to categorize images and generate descriptive tags automatically, streamlining content management workflows. Implemented using TensorFlow and Keras frameworks with OpenCV for image preprocessing, achieving high accuracy in multi-class classification tasks. The model processes large volumes of visual content efficiently, reducing manual tagging efforts and improving content discoverability across the platform.",
+                "es": "Desarrollé una solución de aprendizaje automático de nivel empresarial para clasificación automatizada de imágenes en Thomson Reuters. El sistema aprovecha redes neuronales convolucionales para categorizar imágenes y generar etiquetas descriptivas automáticamente, optimizando los flujos de trabajo de gestión de contenido. Implementado usando frameworks TensorFlow y Keras con OpenCV para preprocesamiento de imágenes, logrando alta precisión en tareas de clasificación multi-clase. El modelo procesa grandes volúmenes de contenido visual eficientemente, reduciendo esfuerzos de etiquetado manual y mejorando la capacidad de descubrimiento de contenido en la plataforma."
+            },
+            "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
+            "startDate": "2024-03",
+            "endDate": "2024-05",
+            "featured": False,
+            "media": [],
             "links": {
                 "github": None,
                 "demo": None,
                 "caseStudy": None
             }
         },
+        # Real project 4
         {
-            "id": "placeholder-blockchain-wallet",
-            "slug": "cryptocurrency-wallet",
+            "id": "geolocation-maps-android",
+            "slug": "geolocation-maps-android",
             "title": {
-                "en": "Cryptocurrency Wallet Application [Placeholder]",
-                "es": "Aplicación de Billetera de Criptomonedas [Marcador]"
+                "en": "Geolocation and Maps in Android",
+                "es": "Geolocalización y Mapas en Android"
             },
             "summary": {
-                "en": "Secure cryptocurrency wallet with multi-chain support and transaction history. (Sample project for demonstration purposes)",
-                "es": "Billetera de criptomonedas segura con soporte multi-cadena e historial de transacciones. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Android application implementing map visualization and user geolocation using two different map providers: OpenStreetMap and Google Maps with tab-based navigation.",
+                "es": "Aplicación Android que implementa visualización de mapas y geolocalización del usuario utilizando dos proveedores de mapas diferentes: OpenStreetMap y Google Maps con navegación por pestañas."
             },
             "description": {
-                "en": "This placeholder project illustrates a potential cryptocurrency wallet application supporting multiple blockchain networks, secure key management, and comprehensive transaction tracking with intuitive user interfaces.",
-                "es": "Este proyecto marcador ilustra una aplicación potencial de billetera de criptomonedas que soporta múltiples redes blockchain, gestión segura de claves y seguimiento integral de transacciones con interfaces de usuario intuitivas."
+                "en": "Developed a comprehensive Android geolocation application that demonstrates dual map provider implementation. The app features real-time user location tracking using FusedLocationProviderClient and displays the user's position on both OpenStreetMap (via Leaflet.js in WebView) and Google Maps (web version in WebView). Implemented runtime permission handling, tab-based navigation for switching between map providers, and location markers with custom labels. Built with Kotlin and designed to work seamlessly on Android devices with JDK 17, showcasing integration of web-based mapping libraries within native Android components.",
+                "es": "Desarrollé una aplicación Android integral de geolocalización que demuestra implementación dual de proveedores de mapas. La app presenta seguimiento de ubicación de usuario en tiempo real usando FusedLocationProviderClient y muestra la posición del usuario tanto en OpenStreetMap (vía Leaflet.js en WebView) como en Google Maps (versión web en WebView). Implementé manejo de permisos en tiempo de ejecución, navegación por pestañas para cambiar entre proveedores de mapas, y marcadores de ubicación con etiquetas personalizadas. Construida con Kotlin y diseñada para funcionar sin problemas en dispositivos Android con JDK 17, mostrando integración de bibliotecas de mapas basadas en web dentro de componentes nativos de Android."
             },
-            "technologies": ["React", "Web3.js", "Ethers.js", "MetaMask", "Solidity"],
-            "startDate": "2023-11",
-            "endDate": "2024-01",
+            "technologies": ["Kotlin", "Android Studio", "WebView", "Leaflet.js", "Google Maps API", "FusedLocationProviderClient", "XML"],
+            "startDate": "2024-10",
+            "endDate": "2024-11",
             "featured": False,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/wallet-ui.jpg",
+                    "type": "youtube",
+                    "src": "https://www.youtube.com/watch?v=8fX_lbGtkmY",
+                    "videoId": "8fX_lbGtkmY",
                     "alt": {
-                        "en": "Wallet user interface",
-                        "es": "Interfaz de usuario de billetera"
+                        "en": "Geolocation and Maps Android App Demonstration",
+                        "es": "Demostración de App Android de Geolocalización y Mapas"
                     },
                     "caption": {
-                        "en": "Multi-chain wallet dashboard",
-                        "es": "Panel de billetera multi-cadena"
+                        "en": "Complete demonstration of OpenStreetMap and Google Maps integration with real-time location tracking",
+                        "es": "Demostración completa de integración de OpenStreetMap y Google Maps con seguimiento de ubicación en tiempo real"
                     }
                 }
             ],
@@ -743,113 +708,157 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-task-automation",
-            "slug": "task-automation-platform",
+            "id": "game-sample-basics-android",
+            "slug": "game-sample-basics-android",
             "title": {
-                "en": "Task Automation Platform [Placeholder]",
-                "es": "Plataforma de Automatización de Tareas [Marcador]"
+                "en": "Game Sample Basics on Android",
+                "es": "Game Sample Basics en Android"
             },
             "summary": {
-                "en": "Workflow automation platform for integrating and orchestrating business processes. (Sample project for demonstration purposes)",
-                "es": "Plataforma de automatización de flujos de trabajo para integrar y orquestar procesos de negocio. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Multiplayer navigation and synchronization app on interactive maps using Bluetooth and Node.js server.",
+                "es": "Aplicación de navegación y sincronización multijugador en mapas interactivos usando Bluetooth y servidor Node.js."
             },
             "description": {
-                "en": "This placeholder represents a potential workflow automation platform enabling users to create, schedule, and monitor automated tasks across various integrated services and APIs with visual workflow builders.",
-                "es": "Este marcador representa una plataforma potencial de automatización de flujos de trabajo que permite a usuarios crear, programar y monitorear tareas automatizadas a través de varios servicios integrados y APIs con constructores visuales de flujos de trabajo."
+                "en": """Mobile application for Android that enables multiplayer interaction through data synchronization between devices connected via Bluetooth and a Node.js server. Incorporates mobile sensors to enhance navigation experience on an interactive ESCOM map.
+
+Key Features:
+- Bluetooth System: Bidirectional communication between nearby devices, local position relay between client and Bluetooth server, initial synchronization with Node.js server
+- Node.js Synchronization: Server receives and updates global positions, connected players can view other players' positions
+- Interactive Map: Dynamic map changes when reaching specific coordinates, initial implementation of transition to interior map when entering a building
+- Device Sensors: Bluetooth for direct connection between nearby players, geolocation and gyroscope for navigation and map events
+
+Future Work:
+- Complete Synchronization: Relay global positions from Bluetooth server to Bluetooth client, update logic to sync local and remote data
+- Multiple Map Handling: Persist connections during activity transitions
+- Sensor Improvements: Integration of additional sensors like accelerometer and camera, voice recognition and QR code scanning""",
+                "es": """Aplicación móvil para Android que permite la interacción multijugador mediante sincronización de datos entre dispositivos conectados vía Bluetooth y un servidor Node.js. Incorpora sensores móviles para enriquecer la experiencia de navegación en un mapa interactivo de la ESCOM.
+
+Características Principales:
+- Sistema Bluetooth: Comunicación bidireccional entre dispositivos cercanos, retransmisión de posiciones locales entre cliente y servidor Bluetooth, sincronización inicial con servidor Node.js
+- Sincronización con Node.js: El servidor recibe y actualiza las posiciones globales, los jugadores conectados pueden visualizar las posiciones de otros jugadores
+- Mapa Interactivo: Cambios dinámicos entre mapas al alcanzar coordenadas específicas, implementación inicial de transición a mapa interior al ingresar a un edificio
+- Sensores del Dispositivo: Bluetooth para conexión directa entre jugadores cercanos, geolocalización y giroscopio para navegación y eventos en el mapa
+
+Trabajo Futuro:
+- Sincronización Completa: Retransmitir posiciones globales desde el servidor Bluetooth al cliente Bluetooth, actualizar la lógica para sincronizar datos locales y remotos
+- Manejo de Mapas Múltiples: Persistencia de conexiones durante cambios entre actividades
+- Mejoras en los Sensores: Integración de sensores adicionales como acelerómetro y cámara, reconocimiento de voz y escaneo de códigos QR"""
             },
-            "technologies": ["Python", "Celery", "RabbitMQ", "PostgreSQL", "Vue.js"],
-            "startDate": "2024-04",
-            "endDate": "2024-06",
+            "technologies": ["Android", "Kotlin", "Node.js", "Bluetooth", "WebSocket", "Geolocation", "Gyroscope", "Google Maps API"],
+            "startDate": "2024-08",
+            "endDate": "2024-12",
             "featured": False,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/workflow.jpg",
+                    "type": "youtube",
+                    "src": "https://www.youtube.com/watch?v=TDtjjZO1muQ",
+                    "videoId": "TDtjjZO1muQ",
                     "alt": {
-                        "en": "Workflow builder interface",
-                        "es": "Interfaz del constructor de flujos de trabajo"
+                        "en": "Game Sample Basics on Android demo",
+                        "es": "Demo de Game Sample Basics en Android"
                     },
                     "caption": {
-                        "en": "Visual workflow design canvas",
-                        "es": "Lienzo de diseño visual de flujos de trabajo"
+                        "en": "Multiplayer navigation and synchronization demonstration",
+                        "es": "Demostración de navegación y sincronización multijugador"
                     }
                 }
             ],
             "links": {
-                "github": None,
+                "github": "https://github.com/connum925/Sensores_ESCOM_V2",
                 "demo": None,
                 "caseStudy": None
             }
         },
         {
-            "id": "placeholder-chat-application",
-            "slug": "realtime-chat-app",
+            "id": "solar-system-android",
+            "slug": "solar-system-android",
             "title": {
-                "en": "Real-time Chat Application [Placeholder]",
-                "es": "Aplicación de Chat en Tiempo Real [Marcador]"
+                "en": "Solar System with Java on Android Studio",
+                "es": "Sistema Solar con Java en Android Studio"
             },
             "summary": {
-                "en": "WebSocket-based real-time messaging platform with multimedia support. (Sample project for demonstration purposes)",
-                "es": "Plataforma de mensajería en tiempo real basada en WebSocket con soporte multimedia. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Interactive Android app to explore the solar system with navigation from universe to planets, plus basic calculator and chronometer.",
+                "es": "Aplicación Android interactiva para explorar el sistema solar con navegación desde el universo hasta los planetas, además de calculadora básica y cronómetro."
             },
             "description": {
-                "en": "This placeholder demonstrates a potential real-time chat application featuring WebSocket communication, multimedia message support, user presence indicators, and end-to-end encryption for secure messaging.",
-                "es": "Este marcador demuestra una aplicación potencial de chat en tiempo real con comunicación WebSocket, soporte de mensajes multimedia, indicadores de presencia de usuario y cifrado de extremo a extremo para mensajería segura."
+                "en": """Android application that allows users to explore the solar system through an intuitive navigation experience. Starting from the universe, users can navigate to the galaxy, then to the solar system, where they can click on individual planets to learn detailed information about each one.
+
+Key Features:
+- Interactive Navigation: Smooth transitions between activities using explicit intents, from universe → galaxy → solar system → individual planets
+- Activity Management: Each screen has its own activity with corresponding layout file and Java class
+- User Interaction: Click listeners implemented on images and buttons to start new activities
+- Navigation Stack: Android back stack properly handles navigation back to previous screens
+- Additional Tools: Includes a fully functional basic calculator and a basic chronometer for time tracking
+
+Technical Implementation:
+The app demonstrates core Android development concepts including activity lifecycle management, intent-based navigation, UI event handling, and proper resource organization. Each planetary view provides educational content in an engaging visual format, making astronomy accessible and interactive.""",
+                "es": """Aplicación Android que permite a los usuarios explorar el sistema solar a través de una experiencia de navegación intuitiva. Comenzando desde el universo, los usuarios pueden navegar a la galaxia, luego al sistema solar, donde pueden hacer clic en planetas individuales para conocer información detallada sobre cada uno.
+
+Características Principales:
+- Navegación Interactiva: Transiciones fluidas entre actividades usando intents explícitos, desde universo → galaxia → sistema solar → planetas individuales
+- Gestión de Actividades: Cada pantalla tiene su propia actividad con archivo de diseño y clase Java correspondiente
+- Interacción del Usuario: Listeners de clic implementados en imágenes y botones para iniciar nuevas actividades
+- Pila de Navegación: El back stack de Android maneja apropiadamente la navegación de regreso a pantallas anteriores
+- Herramientas Adicionales: Incluye una calculadora básica totalmente funcional y un cronómetro básico para seguimiento de tiempo
+
+Implementación Técnica:
+La aplicación demuestra conceptos fundamentales del desarrollo Android incluyendo gestión del ciclo de vida de actividades, navegación basada en intents, manejo de eventos de UI y organización apropiada de recursos. Cada vista planetaria proporciona contenido educativo en un formato visual atractivo, haciendo la astronomía accesible e interactiva."""
             },
-            "technologies": ["Node.js", "Socket.io", "MongoDB", "React", "WebRTC"],
-            "startDate": "2023-09",
-            "endDate": "2023-11",
+            "technologies": ["Java", "Android SDK", "Android Studio", "XML Layouts", "Intent Navigation", "Activity Lifecycle"],
+            "startDate": "2024-03",
+            "endDate": "2024-05",
             "featured": False,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/chat-ui.jpg",
+                    "type": "youtube",
+                    "src": "https://www.youtube.com/watch?v=i0CtXqoBqLY",
+                    "videoId": "i0CtXqoBqLY",
                     "alt": {
-                        "en": "Chat application interface",
-                        "es": "Interfaz de aplicación de chat"
+                        "en": "Solar System Android app demonstration",
+                        "es": "Demostración de app Android del Sistema Solar"
                     },
                     "caption": {
-                        "en": "Modern messaging interface with rich media",
-                        "es": "Interfaz moderna de mensajería con medios enriquecidos"
+                        "en": "Interactive navigation through the solar system with calculator and chronometer features",
+                        "es": "Navegación interactiva a través del sistema solar con funciones de calculadora y cronómetro"
                     }
                 }
             ],
             "links": {
-                "github": None,
+                "github": "https://github.com/connum925/SolarSystemApp",
                 "demo": None,
                 "caseStudy": None
             }
         },
         {
-            "id": "placeholder-analytics-engine",
-            "slug": "analytics-reporting-engine",
+            "id": "fpga-vga-graphics",
+            "slug": "fpga-vga-graphics-system",
             "title": {
-                "en": "Analytics & Reporting Engine [Placeholder]",
-                "es": "Motor de Análisis y Reportes [Marcador]"
+                "en": "FPGA VGA Graphics Rendering System",
+                "es": "Sistema de Renderizado Gráfico en FPGA con Interfaz VGA"
             },
             "summary": {
-                "en": "Comprehensive analytics platform with customizable dashboards and automated reporting. (Sample project for demonstration purposes)",
-                "es": "Plataforma integral de análisis con paneles personalizables y reportes automatizados. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Embedded system on FPGA implementing mathematical graphics rendering with VGA interface, developed using C++ and assembly language.",
+                "es": "Sistema embebido en FPGA que implementa renderizado gráfico matemático con interfaz VGA, desarrollado usando C++ y lenguaje ensamblador."
             },
             "description": {
-                "en": "This placeholder illustrates a potential analytics and reporting engine providing comprehensive data visualization, custom dashboard creation, automated report generation, and data export capabilities for business intelligence.",
-                "es": "Este marcador ilustra un motor potencial de análisis y reportes que proporciona visualización integral de datos, creación de paneles personalizados, generación automatizada de reportes y capacidades de exportación de datos para inteligencia de negocios."
+                "en": "Developed an advanced embedded graphics system on FPGA using Quartus Prime, implemented with C++ and assembly language for low-level optimization. The project demonstrates expertise in computer architecture, System-on-Chip (SoC) design, and digital systems.\n\nKey Technical Features:\n• Mathematical Graphics Rendering: Developed rasterization algorithms to render complex geometric shapes on a Cartesian plane (X,Y) including lines (Bresenham's algorithm), circles (midpoint algorithm), filled circles, and parabolas using discrete mathematical approximations\n• Fixed-Point Arithmetic: Implemented fixed-point arithmetic to handle decimal calculations in hardware without floating-point units, optimizing FPGA logic resource usage\n• Hardware Communication Protocols: VGA interface (640x480 @ 60Hz) with horizontal and vertical synchronization, PS/2 controller for real-time keyboard input, custom GPIO ports and data buses\n• LCD Display System: Programmed LCD screen for real-time Cartesian coordinate visualization synchronized with the VGA rendering system\n• Real-Time Interactivity: Interrupt-driven event system for keyboard capture, enabling dynamic manipulation of geometric figures (translation, scaling, parameter modification)\n• Resource Optimization: Design considering FPGA memory and combinational logic limitations, implementing hardware-level pipelining and parallelism techniques",
+                "es": "Desarrollé un sistema embebido avanzado de gráficos en FPGA utilizando Quartus Prime, implementado mediante C++ y lenguaje ensamblador para optimización de bajo nivel. El proyecto demuestra expertise en arquitectura de computadoras, diseño de System-on-Chip (SoC) y sistemas digitales.\n\nCaracterísticas Técnicas Principales:\n• Renderizado Gráfico Matemático: Desarrollo de algoritmos de rasterización para renderizar figuras geométricas complejas en un plano cartesiano (X,Y) incluyendo líneas (algoritmo de Bresenham), círculos (algoritmo del punto medio), círculos rellenos y parábolas mediante aproximaciones matemáticas discretas\n• Aritmética de Punto Fijo: Implementación de aritmética de punto fijo para manejar cálculos decimales en hardware sin unidad de punto flotante, optimizando el uso de recursos lógicos de la FPGA\n• Protocolos de Comunicación Hardware: Interfaz VGA (640x480 @ 60Hz) con sincronización horizontal y vertical, controlador PS/2 para entrada de teclado en tiempo real, puertos GPIO personalizados y buses de datos\n• Sistema de Display LCD: Programación de pantalla LCD para visualización de coordenadas cartesianas en tiempo real, sincronizada con el sistema de renderizado VGA\n• Interactividad en Tiempo Real: Sistema de eventos mediante interrupciones para captura de teclas del teclado, permitiendo manipulación dinámica de las figuras geométricas (traslación, escalado, cambio de parámetros)\n• Optimización de Recursos: Diseño considerando las limitaciones de memoria y lógica combinacional de la FPGA, implementando técnicas de pipeline y paralelismo a nivel de hardware"
             },
-            "technologies": ["Python", "Pandas", "Matplotlib", "Flask", "PostgreSQL"],
+            "technologies": ["Intel Quartus Prime", "C++", "Assembly Language", "Verilog", "VHDL", "VGA Protocol", "PS/2 Protocol", "FPGA", "Fixed-Point Arithmetic", "Embedded Systems"],
             "startDate": "2024-01",
-            "endDate": "2024-03",
-            "featured": False,
+            "endDate": "2024-05",
+            "featured": True,
             "media": [
                 {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/analytics.jpg",
+                    "type": "video",
+                    "src": "/media/projects/fpga/VideoF.mp4",
                     "alt": {
-                        "en": "Analytics dashboard view",
-                        "es": "Vista de panel de análisis"
+                        "en": "FPGA VGA Graphics System Demonstration",
+                        "es": "Demostración del Sistema Gráfico VGA en FPGA"
                     },
                     "caption": {
-                        "en": "Comprehensive business intelligence dashboard",
-                        "es": "Panel integral de inteligencia de negocios"
+                        "en": "Real-time rendering of geometric shapes on VGA display with interactive keyboard control",
+                        "es": "Renderizado en tiempo real de figuras geométricas en display VGA con control interactivo por teclado"
                     }
                 }
             ],
@@ -860,38 +869,51 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-ci-cd-pipeline",
+            "id": "computer-networks-wget",
+            "slug": "custom-wget-python",
+            "title": {
+                "en": "Computer Networks WGET - Custom Implementation in Python",
+                "es": "Redes de Computadoras WGET - Implementación Personalizada en Python"
+            },
+            "summary": {
+                "en": "Custom implementation of wget in Python for recursive website downloading with link replacement and concurrent processing.",
+                "es": "Implementación personalizada de wget en Python para descarga recursiva de sitios web con reemplazo de enlaces y procesamiento concurrente."
+            },
+            "description": {
+                "en": "A sophisticated Python-based implementation of the wget utility that recursively downloads entire websites for offline viewing. This networking project showcases advanced HTTP protocol handling, concurrent programming, and intelligent HTML parsing. The tool downloads web pages recursively to a specified depth, automatically replaces all links to maintain site integrity offline, and leverages multi-threading for optimal performance. Built with industry-standard libraries including Requests for HTTP operations, BeautifulSoup4 for HTML parsing, and ThreadPoolExecutor for concurrent downloads. The implementation demonstrates deep understanding of web technologies, network protocols, and Python's concurrency features. Perfect for archiving websites, offline research, or learning advanced networking concepts. Handles complex scenarios like relative paths, error recovery, and maintains proper file structure for downloaded content.",
+                "es": "Una implementación sofisticada en Python de la utilidad wget que descarga sitios web completos recursivamente para visualización sin conexión. Este proyecto de redes demuestra manejo avanzado del protocolo HTTP, programación concurrente y análisis inteligente de HTML. La herramienta descarga páginas web recursivamente hasta una profundidad especificada, reemplaza automáticamente todos los enlaces para mantener la integridad del sitio offline, y aprovecha multi-threading para rendimiento óptimo. Construido con bibliotecas estándar de la industria incluyendo Requests para operaciones HTTP, BeautifulSoup4 para análisis HTML, y ThreadPoolExecutor para descargas concurrentes. La implementación demuestra comprensión profunda de tecnologías web, protocolos de red, y características de concurrencia de Python. Perfecto para archivar sitios web, investigación offline, o aprender conceptos avanzados de redes. Maneja escenarios complejos como rutas relativas, recuperación de errores, y mantiene estructura de archivos apropiada para contenido descargado."
+            },
+            "technologies": ["Python", "Requests", "BeautifulSoup4", "lxml", "ThreadPoolExecutor", "HTML Parsing", "Web Scraping", "Concurrent Programming"],
+            "startDate": "2024-09",
+            "endDate": "2024-11",
+            "featured": False,
+            "media": [],
+            "links": {
+                "github": "https://github.com/connum925/Computer-Networks-WGET",
+                "demo": None,
+                "caseStudy": None
+            }
+        },
+        {
+            "id": "tr-ci-cd-pipeline",
             "slug": "cicd-deployment-pipeline",
             "title": {
-                "en": "CI/CD Deployment Pipeline [Placeholder]",
-                "es": "Pipeline de Despliegue CI/CD [Marcador]"
+                "en": "CI/CD Deployment Pipeline",
+                "es": "Pipeline de Despliegue CI/CD"
             },
             "summary": {
-                "en": "Automated continuous integration and deployment pipeline with quality gates. (Sample project for demonstration purposes)",
-                "es": "Pipeline automatizado de integración y despliegue continuo con puertas de calidad. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Automated continuous integration and deployment pipeline with quality gates.",
+                "es": "Pipeline automatizado de integración y despliegue continuo con puertas de calidad."
             },
             "description": {
-                "en": "This placeholder represents a potential CI/CD pipeline implementation featuring automated testing, code quality analysis, security scanning, and multi-environment deployment orchestration with rollback capabilities.",
-                "es": "Este marcador representa una implementación potencial de pipeline CI/CD con pruebas automatizadas, análisis de calidad de código, escaneo de seguridad y orquestación de despliegue multi-ambiente con capacidades de rollback."
+                "en": "Designed and implemented a comprehensive CI/CD pipeline for Thomson Reuters featuring automated testing, code quality analysis, security scanning, and multi-environment deployment orchestration with rollback capabilities. Built using Jenkins for pipeline orchestration, Docker for containerization, and Kubernetes for production deployments. Integrated GitLab CI for version control workflows and Terraform for infrastructure as code. The pipeline includes quality gates at each stage, automated testing suites, and security vulnerability scanning, significantly reducing deployment time while improving code quality and reliability.",
+                "es": "Diseñé e implementé un pipeline CI/CD integral para Thomson Reuters con pruebas automatizadas, análisis de calidad de código, escaneo de seguridad y orquestación de despliegue multi-ambiente con capacidades de rollback. Construido usando Jenkins para orquestación de pipeline, Docker para containerización, y Kubernetes para despliegues en producción. Integré GitLab CI para flujos de trabajo de control de versiones y Terraform para infraestructura como código. El pipeline incluye puertas de calidad en cada etapa, suites de pruebas automatizadas y escaneo de vulnerabilidades de seguridad, reduciendo significativamente el tiempo de despliegue mientras mejora la calidad y confiabilidad del código."
             },
             "technologies": ["Jenkins", "Docker", "Kubernetes", "GitLab CI", "Terraform"],
             "startDate": "2024-07",
             "endDate": "2024-09",
             "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/pipeline.jpg",
-                    "alt": {
-                        "en": "CI/CD pipeline visualization",
-                        "es": "Visualización de pipeline CI/CD"
-                    },
-                    "caption": {
-                        "en": "Automated deployment workflow stages",
-                        "es": "Etapas de flujo de trabajo de despliegue automatizado"
-                    }
-                }
-            ],
+            "media": [],
             "links": {
                 "github": None,
                 "demo": None,
@@ -899,38 +921,25 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-content-cms",
+            "id": "tr-content-cms",
             "slug": "headless-cms-platform",
             "title": {
-                "en": "Headless CMS Platform [Placeholder]",
-                "es": "Plataforma CMS Headless [Marcador]"
+                "en": "Headless CMS Platform",
+                "es": "Plataforma CMS Headless"
             },
             "summary": {
-                "en": "API-first content management system with flexible content modeling. (Sample project for demonstration purposes)",
-                "es": "Sistema de gestión de contenido API-first con modelado flexible de contenido. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "API-first content management system with flexible content modeling.",
+                "es": "Sistema de gestión de contenido API-first con modelado flexible de contenido."
             },
             "description": {
-                "en": "This placeholder demonstrates a potential headless CMS solution offering flexible content modeling, RESTful and GraphQL APIs, role-based access control, and multi-channel content delivery capabilities.",
-                "es": "Este marcador demuestra una solución potencial de CMS headless que ofrece modelado flexible de contenido, APIs RESTful y GraphQL, control de acceso basado en roles y capacidades de entrega de contenido multi-canal."
+                "en": "Developed a headless CMS solution for Thomson Reuters offering flexible content modeling, RESTful and GraphQL APIs, role-based access control, and multi-channel content delivery capabilities. Built on Node.js and Express with MongoDB for content storage and Redis for caching. The platform enables content creators to manage articles, media, and structured data through a flexible API-first architecture, supporting delivery to web, mobile, and third-party platforms. Implemented GraphQL for efficient data querying and role-based permissions for enterprise security requirements.",
+                "es": "Desarrollé una solución de CMS headless para Thomson Reuters que ofrece modelado flexible de contenido, APIs RESTful y GraphQL, control de acceso basado en roles y capacidades de entrega de contenido multi-canal. Construido en Node.js y Express con MongoDB para almacenamiento de contenido y Redis para caché. La plataforma permite a los creadores de contenido gestionar artículos, medios y datos estructurados a través de una arquitectura API-first flexible, soportando entrega a plataformas web, móviles y de terceros. Implementé GraphQL para consultas de datos eficientes y permisos basados en roles para requisitos de seguridad empresarial."
             },
             "technologies": ["Node.js", "GraphQL", "MongoDB", "Express", "Redis"],
             "startDate": "2023-12",
             "endDate": "2024-02",
             "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/cms-admin.jpg",
-                    "alt": {
-                        "en": "CMS administration panel",
-                        "es": "Panel de administración CMS"
-                    },
-                    "caption": {
-                        "en": "Content management interface",
-                        "es": "Interfaz de gestión de contenido"
-                    }
-                }
-            ],
+            "media": [],
             "links": {
                 "github": None,
                 "demo": None,
@@ -938,38 +947,25 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-security-scanner",
+            "id": "tr-security-scanner",
             "slug": "vulnerability-security-scanner",
             "title": {
-                "en": "Vulnerability Security Scanner [Placeholder]",
-                "es": "Escáner de Seguridad de Vulnerabilidades [Marcador]"
+                "en": "Vulnerability Security Scanner",
+                "es": "Escáner de Seguridad de Vulnerabilidades"
             },
             "summary": {
-                "en": "Automated security scanning tool for identifying code vulnerabilities and compliance issues. (Sample project for demonstration purposes)",
-                "es": "Herramienta de escaneo de seguridad automatizado para identificar vulnerabilidades de código y problemas de cumplimiento. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Automated security scanning tool for identifying code vulnerabilities and compliance issues.",
+                "es": "Herramienta de escaneo de seguridad automatizado para identificar vulnerabilidades de código y problemas de cumplimiento."
             },
             "description": {
-                "en": "This placeholder illustrates a potential security scanning solution performing automated vulnerability detection, dependency analysis, compliance checking, and generating detailed security reports with remediation recommendations.",
-                "es": "Este marcador ilustra una solución potencial de escaneo de seguridad que realiza detección automatizada de vulnerabilidades, análisis de dependencias, verificación de cumplimiento y genera reportes detallados de seguridad con recomendaciones de remediación."
+                "en": "Developed an automated security scanning solution for Thomson Reuters performing vulnerability detection, dependency analysis, compliance checking, and generating detailed security reports with remediation recommendations. Integrated OWASP security standards, Snyk for dependency vulnerability scanning, and SonarQube for code quality and security analysis. Built with Python and containerized using Docker for consistent scanning environments. The tool automatically identifies security vulnerabilities, outdated dependencies, and compliance violations, providing actionable reports to development teams and significantly improving the security posture of applications.",
+                "es": "Desarrollé una solución de escaneo de seguridad automatizado para Thomson Reuters que realiza detección de vulnerabilidades, análisis de dependencias, verificación de cumplimiento y genera reportes detallados de seguridad con recomendaciones de remediación. Integré estándares de seguridad OWASP, Snyk para escaneo de vulnerabilidades de dependencias, y SonarQube para análisis de calidad y seguridad de código. Construido con Python y containerizado usando Docker para ambientes de escaneo consistentes. La herramienta identifica automáticamente vulnerabilidades de seguridad, dependencias desactualizadas y violaciones de cumplimiento, proporcionando reportes accionables a equipos de desarrollo y mejorando significativamente la postura de seguridad de las aplicaciones."
             },
             "technologies": ["Python", "OWASP", "Snyk", "SonarQube", "Docker"],
             "startDate": "2024-05",
             "endDate": "2024-07",
             "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/security-report.jpg",
-                    "alt": {
-                        "en": "Security scan results",
-                        "es": "Resultados de escaneo de seguridad"
-                    },
-                    "caption": {
-                        "en": "Vulnerability assessment dashboard",
-                        "es": "Panel de evaluación de vulnerabilidades"
-                    }
-                }
-            ],
+            "media": [],
             "links": {
                 "github": None,
                 "demo": None,
@@ -977,38 +973,25 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-mobile-fitness",
+            "id": "tr-mobile-fitness",
             "slug": "fitness-tracking-mobile-app",
             "title": {
-                "en": "Fitness Tracking Mobile App [Placeholder]",
-                "es": "App Móvil de Seguimiento Fitness [Marcador]"
+                "en": "Fitness Tracking Mobile App",
+                "es": "App Móvil de Seguimiento Fitness"
             },
             "summary": {
-                "en": "Cross-platform mobile application for workout tracking and health monitoring. (Sample project for demonstration purposes)",
-                "es": "Aplicación móvil multiplataforma para seguimiento de entrenamientos y monitoreo de salud. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Cross-platform mobile application for workout tracking and health monitoring.",
+                "es": "Aplicación móvil multiplataforma para seguimiento de entrenamientos y monitoreo de salud."
             },
             "description": {
-                "en": "This placeholder represents a potential fitness tracking application featuring workout logging, progress visualization, nutrition tracking, and integration with wearable devices for comprehensive health monitoring.",
-                "es": "Este marcador representa una aplicación potencial de seguimiento fitness con registro de entrenamientos, visualización de progreso, seguimiento nutricional e integración con dispositivos portátiles para monitoreo integral de salud."
+                "en": "Built a cross-platform fitness tracking application for Thomson Reuters employee wellness program featuring workout logging, progress visualization, nutrition tracking, and integration with wearable devices for comprehensive health monitoring. Developed using Flutter and Dart for seamless iOS and Android deployment, with Firebase for backend services and real-time data synchronization. Integrated HealthKit for iOS and Google Fit for Android to capture fitness data from wearable devices. The app includes personalized workout plans, progress analytics, and social features to encourage employee wellness and engagement.",
+                "es": "Construí una aplicación de seguimiento fitness multiplataforma para el programa de bienestar de empleados de Thomson Reuters con registro de entrenamientos, visualización de progreso, seguimiento nutricional e integración con dispositivos portátiles para monitoreo integral de salud. Desarrollado usando Flutter y Dart para despliegue fluido en iOS y Android, con Firebase para servicios backend y sincronización de datos en tiempo real. Integré HealthKit para iOS y Google Fit para Android para capturar datos fitness de dispositivos portátiles. La app incluye planes de entrenamiento personalizados, analíticas de progreso y características sociales para fomentar el bienestar y compromiso de empleados."
             },
             "technologies": ["Flutter", "Dart", "Firebase", "HealthKit", "Google Fit"],
             "startDate": "2023-10",
             "endDate": "2023-12",
             "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/fitness-app.jpg",
-                    "alt": {
-                        "en": "Fitness app interface",
-                        "es": "Interfaz de app fitness"
-                    },
-                    "caption": {
-                        "en": "Workout tracking and progress visualization",
-                        "es": "Seguimiento de entrenamientos y visualización de progreso"
-                    }
-                }
-            ],
+            "media": [],
             "links": {
                 "github": None,
                 "demo": None,
@@ -1016,19 +999,19 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-inventory-system",
+            "id": "tr-inventory-system",
             "slug": "inventory-management-system",
             "title": {
-                "en": "Inventory Management System [Placeholder]",
-                "es": "Sistema de Gestión de Inventario [Marcador]"
+                "en": "Inventory Management System",
+                "es": "Sistema de Gestión de Inventario"
             },
             "summary": {
-                "en": "Comprehensive inventory management solution with barcode scanning and automated reordering. (Sample project for demonstration purposes)",
-                "es": "Solución integral de gestión de inventario con escaneo de códigos de barras y reorden automatizado. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Comprehensive inventory management solution with barcode scanning and automated reordering.",
+                "es": "Solución integral de gestión de inventario con escaneo de códigos de barras y reorden automatizado."
             },
             "description": {
-                "en": "This placeholder demonstrates a potential inventory management system offering real-time stock tracking, barcode scanning integration, automated reorder points, multi-location support, and comprehensive reporting capabilities.",
-                "es": "Este marcador demuestra un sistema potencial de gestión de inventario que ofrece seguimiento de stock en tiempo real, integración de escaneo de códigos de barras, puntos de reorden automatizados, soporte multi-ubicación y capacidades integrales de reportes."
+                "en": "Developed a comprehensive inventory management system for Thomson Reuters offering real-time stock tracking, barcode scanning integration, automated reorder points, multi-location support, and comprehensive reporting capabilities. Built with Java and Spring Boot for robust backend services, MySQL for reliable data storage, and Angular for a modern, responsive frontend. Integrated JasperReports for generating detailed inventory reports and analytics. The system tracks inventory across multiple locations, automatically triggers reorder notifications when stock levels fall below thresholds, and provides real-time visibility into inventory status, significantly improving operational efficiency.",
+                "es": "Desarrollé un sistema integral de gestión de inventario para Thomson Reuters que ofrece seguimiento de stock en tiempo real, integración de escaneo de códigos de barras, puntos de reorden automatizados, soporte multi-ubicación y capacidades integrales de reportes. Construido con Java y Spring Boot para servicios backend robustos, MySQL para almacenamiento de datos confiable, y Angular para un frontend moderno y responsive. Integré JasperReports para generar reportes detallados de inventario y analíticas. El sistema rastrea inventario a través de múltiples ubicaciones, activa automáticamente notificaciones de reorden cuando los niveles de stock caen debajo de umbrales, y proporciona visibilidad en tiempo real del estado del inventario, mejorando significativamente la eficiencia operacional."
             },
             "technologies": ["Java", "Spring Boot", "MySQL", "Angular", "JasperReports"],
             "startDate": "2024-02",
@@ -1058,21 +1041,21 @@ def generate_projects():
             "id": "placeholder-video-streaming",
             "slug": "video-streaming-platform",
             "title": {
-                "en": "Video Streaming Platform [Placeholder]",
-                "es": "Plataforma de Streaming de Video [Marcador]"
+                "en": "Video Streaming Platform",
+                "es": "Plataforma de Streaming de Video"
             },
             "summary": {
-                "en": "Scalable video streaming service with adaptive bitrate and CDN integration. (Sample project for demonstration purposes)",
-                "es": "Servicio de streaming de video escalable con bitrate adaptativo e integración CDN. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Scalable video streaming service with adaptive bitrate and CDN integration.",
+                "es": "Servicio de streaming de video escalable con bitrate adaptativo e integración CDN."
             },
             "description": {
-                "en": "This placeholder illustrates a potential video streaming platform featuring adaptive bitrate streaming, CDN integration, video transcoding pipeline, user authentication, and comprehensive analytics for content consumption patterns.",
-                "es": "Este marcador ilustra una plataforma potencial de streaming de video con streaming de bitrate adaptativo, integración CDN, pipeline de transcodificación de video, autenticación de usuario y análisis integral de patrones de consumo de contenido."
+                "en": "Developed a comprehensive video streaming platform featuring adaptive bitrate streaming, CDN integration, video transcoding pipeline, user authentication, and comprehensive analytics for content consumption patterns.",
+                "es": "Desarrollé una plataforma integral de streaming de video con streaming de bitrate adaptativo, integración CDN, pipeline de transcodificación de video, autenticación de usuario y análisis integral de patrones de consumo de contenido."
             },
             "technologies": ["Node.js", "HLS", "FFmpeg", "AWS S3", "CloudFront"],
             "startDate": "2024-08",
             "endDate": "2024-10",
-            "featured": False,
+            "featured": True,
             "media": [
                 {
                     "type": "image",
@@ -1097,21 +1080,21 @@ def generate_projects():
             "id": "placeholder-calendar-scheduler",
             "slug": "collaborative-calendar-scheduler",
             "title": {
-                "en": "Collaborative Calendar Scheduler [Placeholder]",
-                "es": "Programador de Calendario Colaborativo [Marcador]"
+                "en": "Collaborative Calendar Scheduler",
+                "es": "Programador de Calendario Colaborativo"
             },
             "summary": {
-                "en": "Team scheduling application with meeting coordination and calendar integration. (Sample project for demonstration purposes)",
-                "es": "Aplicación de programación de equipo con coordinación de reuniones e integración de calendario. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Team scheduling application with meeting coordination and calendar integration.",
+                "es": "Aplicación de programación de equipo con coordinación de reuniones e integración de calendario."
             },
             "description": {
-                "en": "This placeholder represents a potential collaborative scheduling solution offering team calendar management, meeting coordination, availability checking, calendar synchronization with external providers, and automated reminder systems.",
-                "es": "Este marcador representa una solución potencial de programación colaborativa que ofrece gestión de calendario de equipo, coordinación de reuniones, verificación de disponibilidad, sincronización de calendario con proveedores externos y sistemas de recordatorios automatizados."
+                "en": "Developed a collaborative scheduling solution offering team calendar management, meeting coordination, availability checking, calendar synchronization with external providers, and automated reminder systems.",
+                "es": "Desarrollé una solución de programación colaborativa que ofrece gestión de calendario de equipo, coordinación de reuniones, verificación de disponibilidad, sincronización de calendario con proveedores externos y sistemas de recordatorios automatizados."
             },
             "technologies": ["React", "Node.js", "PostgreSQL", "Google Calendar API", "Outlook API"],
             "startDate": "2023-08",
             "endDate": "2023-10",
-            "featured": False,
+            "featured": True,
             "media": [
                 {
                     "type": "image",
@@ -1133,40 +1116,27 @@ def generate_projects():
             }
         },
         {
-            "id": "placeholder-document-processor",
-            "slug": "document-processing-ocr",
+            "id": "personal-portfolio",
+            "slug": "personal-portfolio-website",
             "title": {
-                "en": "Document Processing with OCR [Placeholder]",
-                "es": "Procesamiento de Documentos con OCR [Marcador]"
+                "en": "Personal Portfolio Website",
+                "es": "Sitio Web de Portafolio Personal"
             },
             "summary": {
-                "en": "Intelligent document processing system with OCR and automated data extraction. (Sample project for demonstration purposes)",
-                "es": "Sistema inteligente de procesamiento de documentos con OCR y extracción automatizada de datos. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Modern and responsive portfolio website showcasing professional experience, projects, and technical skills.",
+                "es": "Sitio web de portafolio moderno y responsive que muestra experiencia profesional, proyectos y habilidades técnicas."
             },
             "description": {
-                "en": "This placeholder demonstrates a potential document processing solution leveraging OCR technology for text extraction, intelligent form recognition, automated data classification, and structured data export for business process automation.",
-                "es": "Este marcador demuestra una solución potencial de procesamiento de documentos aprovechando tecnología OCR para extracción de texto, reconocimiento inteligente de formularios, clasificación automatizada de datos y exportación de datos estructurados para automatización de procesos de negocio."
+                "en": "Developed a fully responsive personal portfolio website from scratch using vanilla JavaScript, HTML5, CSS3, and Bootstrap 5. The site features a modern design with smooth animations, dark/light theme toggle, bilingual support (English/Spanish), and dynamic content loading from JSON APIs.\n\nKey Features:\n• Responsive Design: Mobile-first approach ensuring optimal viewing experience across all devices\n• Theme System: Dark/light mode toggle with persistent user preference using localStorage\n• Internationalization: Complete bilingual support with dynamic content switching between English and Spanish\n• Dynamic Content: Modular architecture loading data from JSON files for easy content management\n• Interactive Galleries: Custom-built media galleries with support for images, videos, and YouTube embeds\n• Smooth Animations: Intersection Observer API for scroll-triggered reveal animations\n• Project Showcase: Detailed project pages with filtering, search functionality, and technology tags\n• Performance Optimized: Lazy loading for media, efficient DOM manipulation, and minimal dependencies\n• SEO Friendly: Semantic HTML5, proper meta tags, and accessibility features (ARIA labels, skip links)\n• Clean Architecture: Modular JavaScript with ES6 modules for maintainability and scalability\n\n[PROJECT_STRUCTURE]\nportfolio/\n├── frontend/                    # Client-side application\n│   ├── index.html              # Main landing page with all sections\n│   ├── project.html            # Dynamic project detail page\n│   ├── assets/\n│   │   ├── css/\n│   │   │   └── styles.css      # Custom styles with CSS variables for theming\n│   │   ├── js/\n│   │   │   ├── main.js         # Core app logic and initialization\n│   │   │   ├── project-detail.js  # Project page rendering\n│   │   │   ├── i18n.js         # Internationalization system\n│   │   │   ├── api.js          # API calls and data fetching\n│   │   │   ├── theme.js        # Dark/light theme management\n│   │   │   ├── animations.js   # Intersection Observer animations\n│   │   │   └── about-gallery.js  # Media gallery component\n│   │   └── images/             # Images and media assets\n│   └── media/\n│       └── projects/           # Project-specific media files\n├── backend/\n│   ├── data/                   # JSON data sources\n│   │   ├── profile.json        # Personal information\n│   │   ├── experience.json     # Work experience\n│   │   ├── education.json      # Educational background\n│   │   ├── skills.json         # Technical skills\n│   │   ├── certificates.json   # Certifications\n│   │   └── projects.json       # Project portfolio\n│   └── scripts/\n│       └── generate_content.py # Content generation utility\n├── local_server.py             # Development server with API simulation\n└── netlify.toml                # Netlify deployment configuration\n[/PROJECT_STRUCTURE]",
+                "es": "Desarrollé un sitio web de portafolio personal completamente responsive desde cero utilizando JavaScript vanilla, HTML5, CSS3 y Bootstrap 5. El sitio presenta un diseño moderno con animaciones suaves, alternador de tema oscuro/claro, soporte bilingüe (Inglés/Español), y carga dinámica de contenido desde APIs JSON.\n\nCaracterísticas Principales:\n• Diseño Responsive: Enfoque mobile-first asegurando experiencia óptima de visualización en todos los dispositivos\n• Sistema de Temas: Alternador de modo oscuro/claro con preferencia de usuario persistente usando localStorage\n• Internacionalización: Soporte bilingüe completo con cambio dinámico de contenido entre Inglés y Español\n• Contenido Dinámico: Arquitectura modular cargando datos desde archivos JSON para gestión fácil de contenido\n• Galerías Interactivas: Galerías multimedia construidas a medida con soporte para imágenes, videos y embeds de YouTube\n• Animaciones Suaves: API Intersection Observer para animaciones de revelación activadas por scroll\n• Exhibición de Proyectos: Páginas detalladas de proyectos con filtrado, funcionalidad de búsqueda y etiquetas de tecnología\n• Optimizado para Rendimiento: Lazy loading para medios, manipulación eficiente del DOM y dependencias mínimas\n• Amigable para SEO: HTML5 semántico, meta tags apropiados y características de accesibilidad (etiquetas ARIA, enlaces de salto)\n• Arquitectura Limpia: JavaScript modular con módulos ES6 para mantenibilidad y escalabilidad\n\n[PROJECT_STRUCTURE]\nportfolio/\n├── frontend/                    # Aplicación del lado del cliente\n│   ├── index.html              # Página principal con todas las secciones\n│   ├── project.html            # Página dinámica de detalle de proyecto\n│   ├── assets/\n│   │   ├── css/\n│   │   │   └── styles.css      # Estilos personalizados con variables CSS para temas\n│   │   ├── js/\n│   │   │   ├── main.js         # Lógica principal e inicialización\n│   │   │   ├── project-detail.js  # Renderizado de página de proyecto\n│   │   │   ├── i18n.js         # Sistema de internacionalización\n│   │   │   ├── api.js          # Llamadas API y obtención de datos\n│   │   │   ├── theme.js        # Gestión de tema oscuro/claro\n│   │   │   ├── animations.js   # Animaciones con Intersection Observer\n│   │   │   └── about-gallery.js  # Componente de galería multimedia\n│   │   └── images/             # Imágenes y recursos multimedia\n│   └── media/\n│       └── projects/           # Archivos multimedia específicos de proyectos\n├── backend/\n│   ├── data/                   # Fuentes de datos JSON\n│   │   ├── profile.json        # Información personal\n│   │   ├── experience.json     # Experiencia laboral\n│   │   ├── education.json      # Formación académica\n│   │   ├── skills.json         # Habilidades técnicas\n│   │   ├── certificates.json   # Certificaciones\n│   │   └── projects.json       # Portafolio de proyectos\n│   └── scripts/\n│       └── generate_content.py # Utilidad de generación de contenido\n├── local_server.py             # Servidor de desarrollo con simulación de API\n└── netlify.toml                # Configuración de despliegue en Netlify\n[/PROJECT_STRUCTURE]"
             },
-            "technologies": ["Python", "Tesseract OCR", "OpenCV", "spaCy", "FastAPI"],
-            "startDate": "2024-10",
-            "endDate": "2024-12",
+            "technologies": ["HTML5", "CSS3", "JavaScript (ES6+)", "Bootstrap 5", "JSON APIs", "Intersection Observer API", "LocalStorage API", "Responsive Design", "Git"],
+            "startDate": "2025-01",
+            "endDate": "2025-02",
             "featured": False,
-            "media": [
-                {
-                    "type": "image",
-                    "src": "/media/projects/placeholder/ocr-processing.jpg",
-                    "alt": {
-                        "en": "Document processing workflow",
-                        "es": "Flujo de trabajo de procesamiento de documentos"
-                    },
-                    "caption": {
-                        "en": "Automated document recognition and extraction",
-                        "es": "Reconocimiento y extracción automatizada de documentos"
-                    }
-                }
-            ],
+            "media": [],
             "links": {
-                "github": None,
+                "github": "https://github.com/connum925/ConnumUM925",
                 "demo": None,
                 "caseStudy": None
             }
@@ -1175,21 +1145,21 @@ def generate_projects():
             "id": "placeholder-payment-gateway",
             "slug": "payment-processing-gateway",
             "title": {
-                "en": "Payment Processing Gateway [Placeholder]",
-                "es": "Gateway de Procesamiento de Pagos [Marcador]"
+                "en": "Payment Processing Gateway",
+                "es": "Gateway de Procesamiento de Pagos"
             },
             "summary": {
-                "en": "Secure payment gateway integration supporting multiple payment providers. (Sample project for demonstration purposes)",
-                "es": "Integración de gateway de pagos seguro que soporta múltiples proveedores de pago. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Secure payment gateway integration supporting multiple payment providers.",
+                "es": "Integración de gateway de pagos seguro que soporta múltiples proveedores de pago."
             },
             "description": {
-                "en": "This placeholder illustrates a potential payment processing gateway offering multi-provider support, PCI-compliant transaction handling, fraud detection mechanisms, subscription billing, and comprehensive transaction reporting.",
-                "es": "Este marcador ilustra un gateway potencial de procesamiento de pagos que ofrece soporte multi-proveedor, manejo de transacciones compatible con PCI, mecanismos de detección de fraude, facturación de suscripciones y reportes integrales de transacciones."
+                "en": "Developed a payment processing gateway offering multi-provider support, PCI-compliant transaction handling, fraud detection mechanisms, subscription billing, and comprehensive transaction reporting.",
+                "es": "Desarrollé un gateway de procesamiento de pagos que ofrece soporte multi-proveedor, manejo de transacciones compatible con PCI, mecanismos de detección de fraude, facturación de suscripciones y reportes integrales de transacciones."
             },
             "technologies": ["Node.js", "Stripe API", "PayPal SDK", "Express", "MongoDB"],
             "startDate": "2024-11",
             "endDate": "2025-01",
-            "featured": False,
+            "featured": True,
             "media": [
                 {
                     "type": "image",
@@ -1214,21 +1184,21 @@ def generate_projects():
             "id": "placeholder-social-analytics",
             "slug": "social-media-analytics",
             "title": {
-                "en": "Social Media Analytics Tool [Placeholder]",
-                "es": "Herramienta de Análisis de Redes Sociales [Marcador]"
+                "en": "Social Media Analytics Tool",
+                "es": "Herramienta de Análisis de Redes Sociales"
             },
             "summary": {
-                "en": "Comprehensive social media monitoring and analytics platform with sentiment analysis. (Sample project for demonstration purposes)",
-                "es": "Plataforma integral de monitoreo y análisis de redes sociales con análisis de sentimiento. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Comprehensive social media monitoring and analytics platform with sentiment analysis.",
+                "es": "Plataforma integral de monitoreo y análisis de redes sociales con análisis de sentimiento."
             },
             "description": {
-                "en": "This placeholder represents a potential social media analytics platform aggregating data from multiple social networks, performing sentiment analysis, tracking engagement metrics, identifying trending topics, and generating actionable insights for marketing strategies.",
-                "es": "Este marcador representa una plataforma potencial de análisis de redes sociales que agrega datos de múltiples redes sociales, realiza análisis de sentimiento, rastrea métricas de engagement, identifica temas en tendencia y genera insights accionables para estrategias de marketing."
+                "en": "Developed a social media analytics platform aggregating data from multiple social networks, performing sentiment analysis, tracking engagement metrics, identifying trending topics, and generating actionable insights for marketing strategies.",
+                "es": "Desarrollé una plataforma de análisis de redes sociales que agrega datos de múltiples redes sociales, realiza análisis de sentimiento, rastrea métricas de engagement, identifica temas en tendencia y genera insights accionables para estrategias de marketing."
             },
             "technologies": ["Python", "Twitter API", "NLP", "Pandas", "Plotly"],
             "startDate": "2023-07",
             "endDate": "2023-09",
-            "featured": False,
+            "featured": True,
             "media": [
                 {
                     "type": "image",
@@ -1253,21 +1223,21 @@ def generate_projects():
             "id": "placeholder-knowledge-base",
             "slug": "searchable-knowledge-base",
             "title": {
-                "en": "Searchable Knowledge Base System [Placeholder]",
-                "es": "Sistema de Base de Conocimiento Buscable [Marcador]"
+                "en": "Searchable Knowledge Base System",
+                "es": "Sistema de Base de Conocimiento Buscable"
             },
             "summary": {
-                "en": "Enterprise knowledge management system with full-text search and AI-powered recommendations. (Sample project for demonstration purposes)",
-                "es": "Sistema empresarial de gestión de conocimiento con búsqueda de texto completo y recomendaciones impulsadas por IA. (Proyecto de ejemplo con fines demostrativos)"
+                "en": "Enterprise knowledge management system with full-text search and AI-powered recommendations.",
+                "es": "Sistema empresarial de gestión de conocimiento con búsqueda de texto completo y recomendaciones impulsadas por IA."
             },
             "description": {
-                "en": "This placeholder demonstrates a potential knowledge base solution featuring full-text search capabilities, AI-powered article recommendations, version control for documentation, collaborative editing, and analytics for content effectiveness and user engagement.",
-                "es": "Este marcador demuestra una solución potencial de base de conocimiento con capacidades de búsqueda de texto completo, recomendaciones de artículos impulsadas por IA, control de versiones para documentación, edición colaborativa y análisis de efectividad de contenido y engagement de usuarios."
+                "en": "Developed a knowledge base solution featuring full-text search capabilities, AI-powered article recommendations, version control for documentation, collaborative editing, and analytics for content effectiveness and user engagement.",
+                "es": "Desarrollé una solución de base de conocimiento con capacidades de búsqueda de texto completo, recomendaciones de artículos impulsadas por IA, control de versiones para documentación, edición colaborativa y análisis de efectividad de contenido y engagement de usuarios."
             },
             "technologies": ["Elasticsearch", "Node.js", "React", "PostgreSQL", "Redis"],
             "startDate": "2024-12",
             "endDate": "2025-02",
-            "featured": False,
+            "featured": True,
             "media": [
                 {
                     "type": "image",
@@ -1292,7 +1262,7 @@ def generate_projects():
 
     with open(DATA_DIR / 'projects.json', 'w', encoding='utf-8') as f:
         json.dump(projects, f, indent=2, ensure_ascii=False)
-    print("Generated projects.json (3 real + 17 placeholder projects)")
+    print("Generated projects.json (5 real + 15 placeholder projects)")
 
 def main():
     """Main generation function"""

@@ -1,50 +1,54 @@
+# Netlify Configuration for Personal Portfolio
+
 [build]
-  # Build command - generate data files from resume
-  command = "python backend/scripts/generate_content.py"
-  # Publish directory - static frontend files
+  # Publish directory - where your static files are located
   publish = "frontend"
-  # Functions directory - serverless functions
-  functions = "netlify/functions"
 
-[build.environment]
-  # Python version for Netlify Functions
-  PYTHON_VERSION = "3.9"
+  # No build command needed since this is a static site
+  command = ""
 
+# Redirect rules for clean URLs and SPA behavior
 [[redirects]]
-  # SPA-style redirects for client-side routing
-  from = "/project.html"
+  from = "/project/*"
   to = "/project.html"
   status = 200
+  force = false
 
-[[redirects]]
-  # Redirect root to index.html
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {path = "!/.netlify/*", path = "!/assets/*", path = "!/media/*", path = "!/project.html"}
-
+# Headers for security and performance
 [[headers]]
-  # Cache static assets
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  # Cache media files
-  for = "/media/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  # Security headers
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    # Security headers
+    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-[functions]
-  # Python runtime for functions
-  node_bundler = "none"
+    # Content Security Policy
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    # Cache static assets for 1 year
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+# 404 error page
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Environment configuration
+[build.environment]
+  NODE_VERSION = "18"

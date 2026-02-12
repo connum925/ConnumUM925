@@ -172,9 +172,77 @@ class ProjectDetailPage {
         descTitle.className = 'h4 mb-3';
         descTitle.textContent = i18n.translate('project.description');
 
-        const descText = document.createElement('p');
+        const descText = document.createElement('div');
         descText.className = 'project-detail-description';
-        descText.textContent = i18n.getBilingualContent(this.project.description);
+
+        // Convert description text to formatted paragraphs and lists
+        const description = i18n.getBilingualContent(this.project.description);
+        const paragraphs = description.split('\n\n').filter(p => p.trim());
+
+        paragraphs.forEach(paragraph => {
+            const trimmed = paragraph.trim();
+
+            // SECURITY: Check if it's a project structure block
+            // Only process if it has both opening and closing tags to prevent injection
+            if (trimmed.startsWith('[PROJECT_STRUCTURE]') && trimmed.endsWith('[/PROJECT_STRUCTURE]')) {
+                // SECURITY: Extract content between tags safely
+                const structureContent = trimmed.replace('[PROJECT_STRUCTURE]', '').replace('[/PROJECT_STRUCTURE]', '').trim();
+                // SECURITY: createProjectStructure includes sanitization
+                const structureDiv = this.createProjectStructure(structureContent);
+                descText.appendChild(structureDiv);
+            }
+            // Check if paragraph contains bullet points
+            else if (trimmed.includes('•') || trimmed.match(/^[-•*]\s/m)) {
+                // Check if it starts with a title before the bullets
+                const lines = trimmed.split('\n');
+                let currentElement = null;
+
+                lines.forEach(line => {
+                    const trimmedLine = line.trim();
+
+                    if (trimmedLine.startsWith('•') || trimmedLine.startsWith('-') || trimmedLine.startsWith('*')) {
+                        // It's a bullet point
+                        if (!currentElement || currentElement.tagName !== 'UL') {
+                            currentElement = document.createElement('ul');
+                            currentElement.className = 'project-feature-list';
+                            descText.appendChild(currentElement);
+                        }
+
+                        const li = document.createElement('li');
+                        // Remove the bullet character and split by colon to separate title from description
+                        const content = trimmedLine.replace(/^[•\-*]\s+/, '');
+                        const colonIndex = content.indexOf(':');
+
+                        if (colonIndex > 0 && colonIndex < 100) {
+                            // Has a title (before colon)
+                            const title = content.substring(0, colonIndex);
+                            const desc = content.substring(colonIndex + 1).trim();
+
+                            const strong = document.createElement('strong');
+                            strong.textContent = title + ': ';
+                            li.appendChild(strong);
+                            li.appendChild(document.createTextNode(desc));
+                        } else {
+                            // No title, just content
+                            li.textContent = content;
+                        }
+
+                        currentElement.appendChild(li);
+                    } else if (trimmedLine) {
+                        // It's a regular line (possibly a section title)
+                        currentElement = document.createElement('p');
+                        currentElement.className = 'mb-2 fw-semibold';
+                        currentElement.textContent = trimmedLine;
+                        descText.appendChild(currentElement);
+                    }
+                });
+            } else {
+                // Regular paragraph
+                const p = document.createElement('p');
+                p.textContent = trimmed;
+                descText.appendChild(p);
+            }
+        });
 
         descSection.appendChild(descTitle);
         descSection.appendChild(descText);
@@ -239,8 +307,48 @@ class ProjectDetailPage {
                 img.src = item.src;
                 img.className = 'd-block w-100';
                 img.alt = i18n.getBilingualContent(item.alt);
-                img.loading = 'lazy';
+                // Force eager loading to avoid Edge lazy loading bug
+                img.loading = 'eager';
+                img.setAttribute('loading', 'eager');
+
+                // Handle image load error
+                img.onerror = () => {
+                    console.error(`[Project Detail] Failed to load image: ${item.src}`);
+                    img.style.display = 'none';
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'd-flex align-items-center justify-content-center bg-secondary';
+                    placeholder.style.minHeight = '400px';
+                    placeholder.innerHTML = `
+                        <div class="text-center text-white">
+                            <i class="bi bi-image" style="font-size: 3rem;"></i>
+                            <p class="mt-3">Image not available</p>
+                        </div>
+                    `;
+                    slideDiv.appendChild(placeholder);
+                };
+
+                img.onload = () => {
+                    console.log(`[Project Detail] Image loaded successfully: ${item.src}`);
+                };
+
                 slideDiv.appendChild(img);
+            } else if (item.type === 'youtube') {
+                // YouTube video embed
+                const embedContainer = document.createElement('div');
+                embedContainer.className = 'ratio ratio-16x9';
+
+                const iframe = document.createElement('iframe');
+                // Extract video ID from URL if not provided
+                const videoId = item.videoId || this.extractYouTubeId(item.src);
+                iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                iframe.title = i18n.getBilingualContent(item.alt);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.loading = 'lazy';
+
+                embedContainer.appendChild(iframe);
+                slideDiv.appendChild(embedContainer);
             } else if (item.type === 'video') {
                 const video = document.createElement('video');
                 video.src = item.src;
@@ -303,6 +411,13 @@ class ProjectDetailPage {
         document.getElementById('projectNotFound').classList.remove('d-none');
     }
 
+    extractYouTubeId(url) {
+        // Extract YouTube video ID from various URL formats
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
+
     formatDate(dateString) {
         if (!dateString) return '';
         const [year, month] = dateString.split('-');
@@ -312,6 +427,136 @@ class ProjectDetailPage {
         };
         const lang = i18n.getCurrentLanguage();
         return `${monthNames[lang][parseInt(month) - 1]} ${year}`;
+    }
+
+    createProjectStructure(content) {
+        const container = document.createElement('div');
+        container.className = 'project-structure-section mt-5';
+
+        // SECURITY: Sanitize and validate input
+        if (!content || typeof content !== 'string') {
+            console.warn('Invalid project structure content');
+            return container;
+        }
+
+        // SECURITY: Limit content size to prevent DoS
+        const MAX_CONTENT_LENGTH = 10000;
+        if (content.length > MAX_CONTENT_LENGTH) {
+            console.warn('Project structure content too large');
+            content = content.substring(0, MAX_CONTENT_LENGTH);
+        }
+
+        // Title (using createElement for security)
+        const title = document.createElement('h3');
+        title.className = 'project-structure-title';
+
+        const icon = document.createElement('i');
+        icon.className = 'bi bi-folder-fill me-2';
+        title.appendChild(icon);
+
+        const titleText = document.createTextNode(i18n.translate('project.structure'));
+        title.appendChild(titleText);
+        container.appendChild(title);
+
+        // Terminal window
+        const terminal = document.createElement('div');
+        terminal.className = 'project-structure-terminal';
+
+        // Terminal header (safe static content)
+        const header = document.createElement('div');
+        header.className = 'terminal-header';
+
+        // Create dots safely
+        ['red', 'yellow', 'green'].forEach(color => {
+            const dot = document.createElement('span');
+            dot.className = `terminal-dot terminal-dot-${color}`;
+            header.appendChild(dot);
+        });
+
+        const headerTitle = document.createElement('span');
+        headerTitle.className = 'terminal-title';
+        headerTitle.textContent = 'project-structure';
+        header.appendChild(headerTitle);
+
+        terminal.appendChild(header);
+
+        // Terminal body
+        const body = document.createElement('div');
+        body.className = 'terminal-body';
+
+        // SECURITY: Parse and render structure with sanitization
+        const lines = content.split('\n');
+        const MAX_LINES = 200; // Prevent DoS with too many lines
+        const pre = document.createElement('pre');
+        const code = document.createElement('code');
+
+        lines.slice(0, MAX_LINES).forEach(line => {
+            // SECURITY: Sanitize each line
+            const sanitizedLine = this.sanitizeStructureLine(line);
+
+            const lineDiv = document.createElement('div');
+            lineDiv.className = 'structure-line';
+
+            // Check if line has a comment
+            const commentMatch = sanitizedLine.match(/^(.+?)(#.+)$/);
+            if (commentMatch) {
+                const path = commentMatch[1];
+                const comment = commentMatch[2];
+
+                const pathSpan = document.createElement('span');
+                pathSpan.className = 'structure-path';
+                pathSpan.textContent = path; // SECURITY: textContent prevents XSS
+
+                const commentSpan = document.createElement('span');
+                commentSpan.className = 'structure-comment';
+                commentSpan.textContent = comment; // SECURITY: textContent prevents XSS
+
+                lineDiv.appendChild(pathSpan);
+                lineDiv.appendChild(commentSpan);
+            } else {
+                // Just the structure line
+                lineDiv.textContent = sanitizedLine; // SECURITY: textContent prevents XSS
+            }
+
+            code.appendChild(lineDiv);
+        });
+
+        pre.appendChild(code);
+        body.appendChild(pre);
+        terminal.appendChild(body);
+        container.appendChild(terminal);
+
+        return container;
+    }
+
+    sanitizeStructureLine(line) {
+        // SECURITY: Remove any potentially dangerous characters
+        if (!line || typeof line !== 'string') {
+            return '';
+        }
+
+        // Remove null bytes
+        line = line.replace(/\0/g, '');
+
+        // Remove control characters except tab and newline
+        line = line.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+
+        // Limit line length to prevent DoS
+        const MAX_LINE_LENGTH = 500;
+        if (line.length > MAX_LINE_LENGTH) {
+            line = line.substring(0, MAX_LINE_LENGTH) + '...';
+        }
+
+        // Only allow safe characters for file structure:
+        // alphanumeric, space, basic punctuation, tree characters
+        const SAFE_PATTERN = /^[a-zA-Z0-9\s\-_.\/()#:├│└─├─ ]+$/;
+        if (!SAFE_PATTERN.test(line)) {
+            console.warn('Potentially unsafe characters detected in structure line');
+            // Remove unsafe characters
+            line = line.replace(/[^a-zA-Z0-9\s\-_.\/()#:├│└─├─ ]/g, '');
+        }
+
+        return line;
     }
 }
 

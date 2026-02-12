@@ -6,7 +6,7 @@ import i18n from './i18n.js';
 import api from './api.js';
 import theme from './theme.js';
 import animations from './animations.js';
-import aboutGallery from './about-gallery.js';
+import aboutGallery from './about-gallery.js?v=4';
 
 class PortfolioApp {
     constructor() {
@@ -35,6 +35,9 @@ class PortfolioApp {
 
         // Setup smooth scroll
         this.setupSmoothScroll();
+
+        // Handle initial hash navigation (when coming from another page)
+        this.handleInitialHash();
     }
 
     async loadAllData() {
@@ -62,8 +65,12 @@ class PortfolioApp {
             document.getElementById('heroTitle').textContent = i18n.getBilingualContent(profile.title);
             document.getElementById('heroSummary').textContent = i18n.getBilingualContent(profile.summary);
 
-            // Update about section
-            document.getElementById('aboutSummary').textContent = i18n.getBilingualContent(profile.summary);
+            // Update about section with dedicated aboutMe content
+            const aboutContent = i18n.getBilingualContent(profile.aboutMe);
+            const aboutElement = document.getElementById('aboutSummary');
+            // Convert line breaks to paragraphs
+            const paragraphs = aboutContent.split('\n\n').filter(p => p.trim());
+            aboutElement.innerHTML = paragraphs.map(p => `<p class="mb-4">${p.trim()}</p>`).join('');
 
             // Update contact links in hero
             const email = profile.contact.email;
@@ -82,12 +89,7 @@ class PortfolioApp {
             document.getElementById('contactGithub').textContent = github;
             document.getElementById('contactGithub').href = `https://${github}`;
 
-            // Update download resume link (placeholder)
-            document.getElementById('downloadResume').href = '#';
-            document.getElementById('downloadResume').addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Resume PDF download would be implemented here. Please contact me directly for a copy.');
-            });
+            // Download resume link is already configured in HTML with direct link to PDF
 
         } catch (error) {
             console.error('Error loading profile:', error);
@@ -558,12 +560,6 @@ class PortfolioApp {
             });
         }
 
-        // Contact form
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => this.handleContactSubmit(e));
-        }
-
         // Listen for language changes to update content
         window.addEventListener('languageChanged', () => {
             this.updateDynamicContent();
@@ -589,58 +585,6 @@ class PortfolioApp {
         this.renderProjects();
     }
 
-    async handleContactSubmit(e) {
-        e.preventDefault();
-
-        const form = e.target;
-        const submitBtn = document.getElementById('submitContactForm');
-        const submitText = submitBtn.querySelector('.submit-text');
-        const submitSpinner = submitBtn.querySelector('.submit-spinner');
-        const messageDiv = document.getElementById('contactFormMessage');
-
-        // Client-side validation
-        if (!form.checkValidity()) {
-            form.classList.add('was-validated');
-            return;
-        }
-
-        const formData = {
-            name: document.getElementById('contactName').value,
-            email: document.getElementById('contactEmailInput').value,
-            subject: document.getElementById('contactSubject').value,
-            message: document.getElementById('contactMessage').value
-        };
-
-        // Disable button and show spinner
-        submitBtn.disabled = true;
-        submitText.textContent = i18n.translate('contact.form.submitting');
-        submitSpinner.classList.remove('d-none');
-
-        try {
-            await api.submitContactForm(formData);
-
-            // Success
-            messageDiv.innerHTML = `<div class="alert alert-success">${i18n.translate('contact.form.success')}</div>`;
-            form.reset();
-            form.classList.remove('was-validated');
-
-        } catch (error) {
-            // Error
-            const errorMessage = error.message || i18n.translate('contact.form.error');
-            messageDiv.innerHTML = `<div class="alert alert-danger">${errorMessage}</div>`;
-
-        } finally {
-            // Re-enable button
-            submitBtn.disabled = false;
-            submitText.textContent = i18n.translate('contact.form.submit');
-            submitSpinner.classList.add('d-none');
-
-            // Clear message after 5 seconds
-            setTimeout(() => {
-                messageDiv.innerHTML = '';
-            }, 5000);
-        }
-    }
 
     updateDynamicContent() {
         // Re-render ALL dynamic content with new language
@@ -665,7 +609,12 @@ class PortfolioApp {
         if (this.profileData) {
             if (heroTitle) heroTitle.textContent = i18n.getBilingualContent(this.profileData.title);
             if (heroSummary) heroSummary.textContent = i18n.getBilingualContent(this.profileData.summary);
-            if (aboutSummary) aboutSummary.textContent = i18n.getBilingualContent(this.profileData.summary);
+            if (aboutSummary) {
+                // Convert line breaks to paragraphs
+                const aboutContent = i18n.getBilingualContent(this.profileData.aboutMe);
+                const paragraphs = aboutContent.split('\n\n').filter(p => p.trim());
+                aboutSummary.innerHTML = paragraphs.map(p => `<p class="mb-4">${p.trim()}</p>`).join('');
+            }
         }
     }
 
@@ -987,6 +936,28 @@ class PortfolioApp {
                 }
             });
         });
+    }
+
+    handleInitialHash() {
+        // Handle hash navigation when page loads (e.g., from project.html#projects)
+        const hash = window.location.hash;
+
+        if (hash && hash !== '#' && hash !== '#!') {
+            // Wait a bit for page to fully render
+            setTimeout(() => {
+                const target = document.querySelector(hash);
+
+                if (target) {
+                    const offset = 80; // Account for fixed navbar
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        }
     }
 
     formatDate(dateString) {

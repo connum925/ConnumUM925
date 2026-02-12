@@ -77,7 +77,7 @@
                         <div class="hero-buttons">
                             <a href="#projects" class="btn btn-primary btn-lg me-3" data-i18n="hero.viewProjects">View Projects</a>
                             <a href="#contact" class="btn btn-outline-primary btn-lg me-3" data-i18n="hero.contact">Get in Touch</a>
-                            <a href="#" class="btn btn-outline-secondary btn-lg" id="downloadResume" data-i18n="hero.downloadResume">
+                            <a href="/Resume_Connor_UMIA.pdf" download="Connor_Urbano_Mendoza_Resume.pdf" class="btn btn-outline-secondary btn-lg" id="downloadResume" data-i18n="hero.downloadResume">
                                 <i class="bi bi-download me-2"></i>Download Resume
                             </a>
                         </div>
@@ -181,7 +181,7 @@
                     <div class="col-lg-10 mx-auto">
                         <h2 class="section-title text-center mb-5 reveal-fade" data-i18n="about.title">About Me</h2>
                         <div class="about-content reveal-fade">
-                            <p class="lead text-center mb-5" id="aboutSummary">Loading...</p>
+                            <div class="lead mb-5" id="aboutSummary">Loading...</div>
                         </div>
 
                         <!-- Personal Images Gallery -->
@@ -197,67 +197,63 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section-padding">
+        <section id="contact" class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title text-center mb-5 reveal-fade" data-i18n="contact.title">Get In Touch</h2>
-                <div class="row g-5">
-                    <!-- Contact Info -->
-                    <div class="col-lg-5 reveal-fade">
-                        <div class="contact-info">
-                            <h3 class="h4 mb-4" data-i18n="contact.infoTitle">Contact Information</h3>
-                            <div class="contact-item mb-4">
-                                <i class="bi bi-envelope-fill me-3 text-primary"></i>
-                                <div>
-                                    <h4 class="h6 mb-1" data-i18n="contact.email">Email</h4>
-                                    <a href="#" id="contactEmail" class="text-decoration-none">Loading...</a>
-                                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="contact-card reveal-fade">
+                            <div class="contact-card-header text-center mb-5">
+                                <p class="lead text-muted" data-i18n="contact.subtitle">
+                                    Let's connect! Feel free to reach out through any of these channels.
+                                </p>
                             </div>
-                            <div class="contact-item mb-4">
-                                <i class="bi bi-linkedin me-3 text-primary"></i>
-                                <div>
-                                    <h4 class="h6 mb-1">LinkedIn</h4>
-                                    <a href="#" id="contactLinkedin" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Loading...</a>
+
+                            <div class="contact-methods">
+                                <!-- Email -->
+                                <div class="contact-method-item reveal-fade">
+                                    <div class="contact-method-icon">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </div>
+                                    <div class="contact-method-content">
+                                        <h3 class="contact-method-title" data-i18n="contact.email">Email</h3>
+                                        <a href="#" id="contactEmail" class="contact-method-link">Loading...</a>
+                                        <p class="contact-method-description text-muted" data-i18n="contact.emailDesc">
+                                            Best for professional inquiries
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="contact-item mb-4">
-                                <i class="bi bi-github me-3 text-primary"></i>
-                                <div>
-                                    <h4 class="h6 mb-1">GitHub</h4>
-                                    <a href="#" id="contactGithub" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Loading...</a>
+
+                                <!-- LinkedIn -->
+                                <div class="contact-method-item reveal-fade">
+                                    <div class="contact-method-icon">
+                                        <i class="bi bi-linkedin"></i>
+                                    </div>
+                                    <div class="contact-method-content">
+                                        <h3 class="contact-method-title">LinkedIn</h3>
+                                        <a href="#" id="contactLinkedin" target="_blank" rel="noopener noreferrer" class="contact-method-link">Loading...</a>
+                                        <p class="contact-method-description text-muted" data-i18n="contact.linkedinDesc">
+                                            Connect and view my professional profile
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- GitHub -->
+                                <div class="contact-method-item reveal-fade">
+                                    <div class="contact-method-icon">
+                                        <i class="bi bi-github"></i>
+                                    </div>
+                                    <div class="contact-method-content">
+                                        <h3 class="contact-method-title">GitHub</h3>
+                                        <a href="#" id="contactGithub" target="_blank" rel="noopener noreferrer" class="contact-method-link">Loading...</a>
+                                        <p class="contact-method-description text-muted" data-i18n="contact.githubDesc">
+                                            Explore my code and repositories
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="col-lg-7 reveal-fade">
-                        <form id="contactForm" class="contact-form" novalidate>
-                            <div class="mb-3">
-                                <label for="contactName" class="form-label" data-i18n="contact.form.name">Name</label>
-                                <input type="text" class="form-control" id="contactName" required maxlength="100" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Your name">
-                                <div class="invalid-feedback" data-i18n="contact.form.nameError">Please enter your name (at least 2 characters).</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contactEmailInput" class="form-label" data-i18n="contact.form.email">Email</label>
-                                <input type="email" class="form-control" id="contactEmailInput" required maxlength="254" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="your.email@example.com">
-                                <div class="invalid-feedback" data-i18n="contact.form.emailError">Please enter a valid email address.</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contactSubject" class="form-label" data-i18n="contact.form.subject">Subject</label>
-                                <input type="text" class="form-control" id="contactSubject" required maxlength="150" data-i18n-placeholder="contact.form.subjectPlaceholder" placeholder="What is this regarding?">
-                                <div class="invalid-feedback" data-i18n="contact.form.subjectError">Please enter a subject (at least 3 characters).</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contactMessage" class="form-label" data-i18n="contact.form.message">Message</label>
-                                <textarea class="form-control" id="contactMessage" rows="5" required maxlength="4000" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Your message..."></textarea>
-                                <div class="invalid-feedback" data-i18n="contact.form.messageError">Please enter a message (at least 10 characters).</div>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg" id="submitContactForm" data-i18n="contact.form.submit">
-                                <span class="submit-text">Send Message</span>
-                                <span class="submit-spinner spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
-                            </button>
-                            <div id="contactFormMessage" class="mt-3"></div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -268,7 +264,11 @@
     <footer class="footer py-4 bg-dark text-white">
         <div class="container text-center">
             <p class="mb-2">&copy; <span id="currentYear"></span> Connor Urbano Mendoza. <span data-i18n="footer.rights">All rights reserved.</span></p>
-            <p class="small text-muted mb-0" data-i18n="footer.built">Built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5</p>
+            <p class="small text-muted mb-0">
+                <span data-i18n="footer.built">Built with HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5</span>
+                <span class="mx-2">·</span>
+                <a href="/project.html?slug=personal-portfolio-website" class="text-muted text-decoration-none footer-portfolio-link" data-i18n="footer.viewMore">View More</a>
+            </p>
         </div>
     </footer>
 

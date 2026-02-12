@@ -219,7 +219,15 @@ class PortfolioRequestHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
         """Custom log format"""
         # Only log API calls and errors, not every static file
-        if '/.netlify/functions/' in args[0] or 'code 404' in format or 'code 500' in format:
+        # Convert format to string to handle HTTPStatus objects
+        format_str = str(format)
+        args_str = str(args[0]) if args else ''
+
+        # Ignore favicon.ico 404 errors (common browser request)
+        if 'favicon.ico' in args_str and '404' in format_str:
+            return
+
+        if '/.netlify/functions/' in args_str or 'code 404' in format_str or 'code 500' in format_str:
             super().log_message(format, *args)
 
 def main():
