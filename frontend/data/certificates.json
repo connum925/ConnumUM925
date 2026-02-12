@@ -1,0 +1,142 @@
+[
+  {
+    "id": "ef-set-english-b2",
+    "title": {
+      "en": "EF SET English Certificate 57/100 (B2 Upper Intermediate)",
+      "es": "Certificado de inglés EF SET 57/100 (B2 Intermedio alto)"
+    },
+    "issuer": "EF SET",
+    "date": "2025-12",
+    "credentialUrl": "https://cert.efset.org/en/HHitRY"
+  },
+  {
+    "id": "linkedin-linux-command",
+    "title": {
+      "en": "Learning Linux Command Line",
+      "es": "Aprender la línea de comandos de Linux"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-04",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/151d9c1df244f7f2d5b6c3813067357fd775e3a45ac397824c92265dbf281e66?trk=share_certificate"
+  },
+  {
+    "id": "ms-career-essentials",
+    "title": {
+      "en": "Career Essentials in Software Development by Microsoft and LinkedIn",
+      "es": "Esenciales de carrera en desarrollo de software (Microsoft y LinkedIn)"
+    },
+    "issuer": "Microsoft",
+    "date": "2025-03",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/4b6f446a8a167b29aaa7ec5bc1bd51c61a9faf25f78b306660c70fa2becd3b21?trk=share_certificate"
+  },
+  {
+    "id": "linkedin-programming-beyond",
+    "title": {
+      "en": "Programming Foundations: Beyond the Fundamentals",
+      "es": "Fundamentos de programación: más allá de los fundamentos"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-03",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/527fc7716bfce18dcb35d58ac0f42d0fcfd47790ae2b96e2d424fcfa77531b35?trk=share_certificate"
+  },
+  {
+    "id": "linkedin-programming-fundamentals",
+    "title": {
+      "en": "Programming Foundations: Fundamentals",
+      "es": "Fundamentos de programación: fundamentos"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-03",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/ba44c71be5d69f30ae94b4de0f1d3f33b053fc3738b0ba3dc71e48f06abb4706?trk=share_certificate"
+  },
+  {
+    "id": "datadog-slo",
+    "title": {
+      "en": "Introduction to Service Level Objectives",
+      "es": "Introducción a los objetivos de nivel de servicio (SLO)"
+    },
+    "issuer": "Datadog",
+    "date": "2025-03",
+    "credentialUrl": "https://learn.datadoghq.com/certificates/9bwfm7m9i0"
+  },
+  {
+    "id": "datadog-observability",
+    "title": {
+      "en": "Introduction to Observability",
+      "es": "Introducción a la observabilidad"
+    },
+    "issuer": "Datadog",
+    "date": "2025-03",
+    "credentialUrl": "https://learn.datadoghq.com/certificates/2haxwtcj19"
+  },
+  {
+    "id": "datadog-sre-101",
+    "title": {
+      "en": "Datadog 101: Site Reliability Engineer",
+      "es": "Datadog 101: ingeniería de confiabilidad del sitio (SRE)"
+    },
+    "issuer": "Datadog",
+    "date": "2025-03",
+    "credentialUrl": "https://learn.datadoghq.com/certificates/ap1mmwiykd"
+  },
+  {
+    "id": "linkedin-sharepoint-beyond",
+    "title": {
+      "en": "SharePoint Online Essential Training: Beyond the Basics",
+      "es": "Formación esencial de SharePoint Online: más allá de lo básico"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-02",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/36d42b9deb7c0802f534ebd43645a0b4d8acdd46e0fee89617c1bfa2d2b4c50a?trk=share_certificate"
+  },
+  {
+    "id": "linkedin-ai-intro-2023",
+    "title": {
+      "en": "Introduction to Artificial Intelligence (2023)",
+      "es": "Introducción a la inteligencia artificial (2023)"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-02",
+    "credentialUrl": "https://www.linkedin.com/learning/certificates/874c39abe4a7ea4f5d974b1f9a5ef309ff7e9d1460f86be5b9b3651ae363e6e7?trk=share_certificate"
+  },
+  {
+    "id": "linkedin-privacy-governance",
+    "title": {
+      "en": "Privacy, Governance, and Compliance: Data Sharing",
+      "es": "Privacidad, gobernanza y cumplimiento: intercambio de datos"
+    },
+    "issuer": "LinkedIn Learning",
+    "date": "2025-02",
+    "credentialUrl": "https://lnkd.in/gnTFw8vK"
+  },
+  {
+    "id": "google-genai-llm",
+    "title": {
+      "en": "Generative AI & Large Language Models",
+      "es": "IA Generativa y Modelos de Lenguaje Grande"
+    },
+    "issuer": "Google Cloud México",
+    "date": "2024-12",
+    "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/3dc5e61c-b821-4b4a-b783-e6f967ce705e"
+  },
+  {
+    "id": "google-genai-fundamentals",
+    "title": {
+      "en": "Generative AI Fundamentals",
+      "es": "Fundamentos de IA generativa"
+    },
+    "issuer": "Google Cloud Skills Boost",
+    "date": "2024-03",
+    "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/3dc5e61c-b821-4b4a-b783-e6f967ce705e"
+  },
+  {
+    "id": "udemy-bootstrap5",
+    "title": {
+      "en": "Bootstrap 5: The Complete Practical Course from Scratch",
+      "es": "Bootstrap 5: El Curso Completo, Práctico y Desde Cero"
+    },
+    "issuer": "Udemy",
+    "date": "2023-07",
+    "credentialUrl": "https://www.udemy.com/certificate/UC-d4249345-d6b1-41fc-8600-e7a50b19db35/"
+  }
+]

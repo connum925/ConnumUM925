@@ -1,0 +1,49 @@
+[
+  {
+    "id": "ipn-escom",
+    "institution": "Instituto Politécnico Nacional",
+    "school": "Escuela Superior de Cómputo (ESCOM)",
+    "degree": {
+      "en": "Bachelor of Computer Systems Engineering",
+      "es": "Ingeniería en Sistemas Computacionales"
+    },
+    "certificate": {
+      "en": "Technical Certificate: Aeronautics",
+      "es": "Certificado Técnico: Aeronáutica"
+    },
+    "location": {
+      "en": "Mexico City, MX",
+      "es": "Ciudad de México, MX"
+    },
+    "startDate": "2021-08",
+    "endDate": "2025-12",
+    "gpa": {
+      "en": "3.5",
+      "es": "8.5"
+    },
+    "coursework": {
+      "en": [
+        "Object-Oriented Programming",
+        "Data Structures and Algorithms",
+        "Database Systems",
+        "Operating Systems",
+        "Design and Analysis of Algorithms",
+        "Artificial Intelligence",
+        "Mobile Application Development",
+        "Software Engineering",
+        "UX/UI Design"
+      ],
+      "es": [
+        "Programación Orientada a Objetos",
+        "Estructuras de Datos y Algoritmos",
+        "Sistemas de Bases de Datos",
+        "Sistemas Operativos",
+        "Diseño y Análisis de Algoritmos",
+        "Inteligencia Artificial",
+        "Desarrollo de Aplicaciones Móviles",
+        "Ingeniería de Software",
+        "Diseño UX/UI"
+      ]
+    }
+  }
+]

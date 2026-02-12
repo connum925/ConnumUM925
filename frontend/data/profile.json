@@ -1,0 +1,24 @@
+{
+  "name": "Connor Urbano Mendoza",
+  "title": {
+    "en": "Software Engineer",
+    "es": "Ingeniero de Software"
+  },
+  "summary": {
+    "en": "Results-driven Software Engineer focused on building reliable, scalable products and enterprise AI solutions. Experienced in full-stack development, LLM integrations, and data-driven operational optimization—working closely with cross-functional teams to turn business needs into maintainable systems. Known for proactive ownership, clear communication, and consistently meeting (and when possible, exceeding) expectations while prioritizing team success.",
+    "es": "Ingeniero de Software enfocado en construir productos confiables y escalables y soluciones empresariales de IA. Experiencia en desarrollo full-stack, integraciones con LLM y optimización operativa basada en datos, colaborando de cerca con equipos multifuncionales para convertir necesidades de negocio en sistemas mantenibles. Me caracterizo por asumir responsabilidad de forma proactiva, comunicar con claridad y cumplir —y cuando se puede, superar— expectativas, priorizando siempre el éxito del equipo."
+  },
+  "aboutMe": {
+    "en": "Hello, thank you for reading more about me. I am a person who made the decision to choose the path of engineering. My academic journey was always full of experiences that taught me that perseverance and consistency bear much fruit.\n\nI always like to be learning new technologies. Since I was little I knew that technology and business were my thing: from software creation to working with embedded circuits. I like to solve problems, but above all I like to be part of something that generates impact.\n\nI know what it is to work hard. I came to perform various roles before becoming a professional: from box packer, paint ambassador at Home Depot, to sales and service advisor at Totalplay. These experiences allowed me to develop skills that today I apply as a professional engineer in large corporations, as demonstrated by my academic and professional trajectory.\n\nI have had the opportunity to live multiple experiences and understand how the business and technological world works. Sometimes it's not just about knowing how to program, it's about understanding what is needed, understanding the business case behind each project.\n\nThank you for reading and I hope you find what you're looking here.",
+    "es": "Hola, gracias por leer más sobre mí. Soy una persona que tomó la decisión de elegir el camino de la ingeniería. Mi trayecto académico estuvo siempre lleno de experiencias que me enseñaron que la perseverancia y la constancia dan muchos frutos.\n\nSiempre me gusta estar aprendiendo nuevas tecnologías. Desde pequeño supe que la tecnología y los negocios eran lo mío: desde la creación de software hasta trabajar con circuitos embebidos. Me gusta resolver problemas, pero sobre todo me gusta ser parte de algo que genere impacto.\n\nConozco lo que es trabajar arduamente. Llegué a desempeñar diversos roles antes de ser profesional: desde empacador de cajas, embajador de pintura en Home Depot, hasta asesor de ventas y servicios en Totalplay. Estas experiencias me permitieron desarrollar habilidades que hoy aplico como ingeniero profesional en grandes corporativos, tal como lo demuestra mi trayectoria académica y profesional.\n\nHe tenido la oportunidad de vivir múltiples experiencias y comprender cómo funciona el mundo empresarial y tecnológico. A veces no solo se trata de saber programar, se trata de entender lo que se necesita, de comprender el caso de negocio detrás de cada proyecto.\n\nGracias por leerme y espero que busques lo encuentres aquí."
+  },
+  "contact": {
+    "email": "connor.jbszz@gmail.com",
+    "linkedin": "linkedin.com/in/connum925",
+    "github": "github.com/connum925"
+  },
+  "location": {
+    "en": "Mexico City, MX",
+    "es": "Ciudad de México, MX"
+  }
+}

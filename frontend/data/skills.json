@@ -1,0 +1,167 @@
+{
+  "languages": {
+    "label": {
+      "en": "Programming Languages",
+      "es": "Lenguajes de Programación"
+    },
+    "proficient": [
+      "JavaScript",
+      "Java",
+      "C",
+      "C++",
+      "C#",
+      "Python",
+      "TypeScript",
+      "HTML/CSS"
+    ],
+    "familiar": [
+      "PHP",
+      "SQL",
+      "Kotlin"
+    ]
+  },
+  "frameworks": {
+    "label": {
+      "en": "Frameworks & Libraries",
+      "es": "Frameworks y Bibliotecas"
+    },
+    "items": [
+      "Node.js",
+      "React",
+      "Angular",
+      "Bootstrap 5",
+      "Laravel",
+      "Flutter",
+      ".NET"
+    ]
+  },
+  "tools": {
+    "label": {
+      "en": "Tools & Technologies",
+      "es": "Herramientas y Tecnologías"
+    },
+    "items": [
+      "Git",
+      "Figma",
+      "VS Code",
+      "MS Azure",
+      "Visual Studio",
+      "IntelliJ",
+      "NetBeans",
+      "MongoDB",
+      "Google Cloud",
+      "Amazon Web Services",
+      "Informatica PowerCenter",
+      "Snowflake",
+      "Alteryx",
+      "Datadog",
+      "Android Studio",
+      "ESP",
+      "Docker",
+      "MCP Servers"
+    ]
+  },
+  "data_engineering": {
+    "label": {
+      "en": "Data Engineering & Business",
+      "es": "Ingeniería de Datos y Negocios"
+    },
+    "items": [
+      {
+        "en": "ETL Processes",
+        "es": "Procesos ETL"
+      },
+      {
+        "en": "Business Cases Analysis",
+        "es": "Análisis de Casos de Negocio"
+      },
+      {
+        "en": "Data Pipeline Design",
+        "es": "Diseño de Pipelines de Datos"
+      },
+      {
+        "en": "Data Warehousing",
+        "es": "Almacenamiento de Datos"
+      }
+    ]
+  },
+  "ai_ml": {
+    "label": {
+      "en": "AI & Machine Learning",
+      "es": "IA y Aprendizaje Automático"
+    },
+    "items": [
+      {
+        "category": {
+          "en": "LLM Models",
+          "es": "Modelos LLM"
+        },
+        "technologies": [
+          "OpenAI GPT",
+          "Claude",
+          "Gemini",
+          "LLaMA",
+          "DeepSeek"
+        ]
+      },
+      {
+        "category": {
+          "en": "AI Techniques",
+          "es": "Técnicas de IA"
+        },
+        "technologies": [
+          "Prompt Engineering",
+          "RAG Systems",
+          "BYOD (Bring Your Own Data)"
+        ]
+      },
+      {
+        "category": {
+          "en": "AI Integrations",
+          "es": "Integraciones de IA"
+        },
+        "technologies": [
+          "Microsoft Teams",
+          "SharePoint",
+          "AWS S3"
+        ]
+      }
+    ]
+  },
+  "interpersonal": {
+    "label": {
+      "en": "Interpersonal Skills",
+      "es": "Habilidades Interpersonales"
+    },
+    "items": [
+      {
+        "en": "Public Speaking",
+        "es": "Oratoria"
+      },
+      {
+        "en": "Adaptable",
+        "es": "Adaptabilidad"
+      },
+      {
+        "en": "Collaborative",
+        "es": "Colaboración"
+      },
+      {
+        "en": "Patient",
+        "es": "Paciencia"
+      },
+      {
+        "en": "Leadership",
+        "es": "Liderazgo"
+      },
+      {
+        "en": "Teamwork",
+        "es": "Trabajo en Equipo"
+      },
+      {
+        "en": "Problem Solving",
+        "es": "Resolución de Problemas"
+      }
+    ]
+  }
+}

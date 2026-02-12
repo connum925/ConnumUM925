@@ -1,0 +1,66 @@
+[
+  {
+    "id": "tr-intern",
+    "company": "Thomson Reuters México",
+    "position": {
+      "en": "Data Analyst Intern",
+      "es": "Analista de Datos"
+    },
+    "location": {
+      "en": "Mexico City, MX",
+      "es": "Ciudad de México, MX"
+    },
+    "startDate": "2025-02",
+    "endDate": null,
+    "current": true,
+    "achievements": [
+      {
+        "en": "Architected and deployed enterprise AI solutions integrating multiple LLM models (OpenAI GPT, Claude, Gemini, LLaMA, DeepSeek) with internal systems including Microsoft Teams, SharePoint, and AWS S3 buckets to streamline business processes.",
+        "es": "Diseñé e implementé soluciones empresariales de IA integrando múltiples modelos LLM (OpenAI GPT, Claude, Gemini, LLaMA, DeepSeek) con sistemas internos incluyendo Microsoft Teams, SharePoint y AWS S3 para optimizar procesos empresariales."
+      },
+      {
+        "en": "Implemented BYOD (Bring Your Own Data) frameworks enabling secure integration of proprietary datasets with AI models, facilitating custom solutions for legal, Boomi, Alteryx, Print, HR, and other departments.",
+        "es": "Implementé marcos BYOD (Bring Your Own Data) que permiten la integración segura de conjuntos de datos propietarios con modelos de IA, facilitando soluciones personalizadas para departamentos legales, Boomi, Alteryx, Print, RRHH y otros."
+      },
+      {
+        "en": "Delivered cross-functional AI support by analyzing requirements, resolving technical tickets, and developing tailored AI integrations to optimize workflows for both internal stakeholders and external clients, reducing processing time of each business case.",
+        "es": "Proporcioné soporte de IA multifuncional analizando requisitos, resolviendo tickets técnicos y desarrollando integraciones de IA personalizadas para optimizar flujos de trabajo para partes interesadas internas y clientes externos, reduciendo el tiempo de procesamiento de cada caso de negocio."
+      },
+      {
+        "en": "Optimized operational workflows by executing IPC monitoring, P4 incident resolution (priority 4-5), and Tableau data validation, enabling senior analysts to focus on strategic initiatives while maintaining service continuity.",
+        "es": "Optimicé flujos de trabajo operativos ejecutando monitoreo IPC, resolución de incidentes P4 (prioridad 4-5) y validación de datos en Tableau, permitiendo a analistas senior enfocarse en iniciativas estratégicas mientras se mantiene la continuidad del servicio."
+      },
+      {
+        "en": "Engineered Python-ServiceNow API integration creating an automated historical database with real-time ticket tracking that boosted team productivity and enhanced trend analysis capabilities for data-driven decision-making.",
+        "es": "Desarrollé integración de API Python-ServiceNow creando una base de datos histórica automatizada con seguimiento de tickets en tiempo real que aumentó la productividad del equipo y mejoró las capacidades de análisis de tendencias para la toma de decisiones basada en datos."
+      },
+      {
+        "en": "Exceeded performance benchmarks by consistently maintaining 85%+ work utilization rate through proactive task management, process optimization, and effective time allocation across multiple operational responsibilities.",
+        "es": "Superé los puntos de referencia de rendimiento manteniendo consistentemente una tasa de utilización del trabajo del 85%+ mediante gestión proactiva de tareas, optimización de procesos y asignación efectiva de tiempo entre múltiples responsabilidades operativas."
+      },
+      {
+        "en": "Executed monitoring shifts for active Salesforce jobs, proactively identifying and preventing potential issues to achieve an 8% reduction in incident production.",
+        "es": "Ejecuté turnos de monitoreo para trabajos activos de Salesforce, identificando y previniendo proactivamente problemas potenciales para lograr una reducción del 8% en la producción de incidentes."
+      }
+    ],
+    "technologies": [
+      "Python",
+      "LLM Models",
+      "OpenAI GPT",
+      "Claude",
+      "Gemini",
+      "LLaMA",
+      "DeepSeek",
+      "Microsoft Teams",
+      "SharePoint",
+      "AWS S3",
+      "ServiceNow API",
+      "Tableau",
+      "Salesforce",
+      "Informatica PowerCenter",
+      "Snowflake",
+      "Alteryx",
+      "Datadog"
+    ]
+  }
+]

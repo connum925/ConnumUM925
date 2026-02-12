@@ -1,14 +1,14 @@
 /**
  * API Module
- * Handles all API calls to Netlify Functions
+ * Handles all data fetching from JSON files
  */
 
-const API_BASE = '/.netlify/functions';
+const DATA_PATH = '/data';
 
 class API {
     async fetchProfile() {
         try {
-            const response = await fetch(`${API_BASE}/profile`);
+            const response = await fetch(`${DATA_PATH}/profile.json`);
             if (!response.ok) throw new Error('Failed to fetch profile');
             return await response.json();
         } catch (error) {
@@ -19,7 +19,7 @@ class API {
 
     async fetchExperience() {
         try {
-            const response = await fetch(`${API_BASE}/experience`);
+            const response = await fetch(`${DATA_PATH}/experience.json`);
             if (!response.ok) throw new Error('Failed to fetch experience');
             return await response.json();
         } catch (error) {
@@ -30,7 +30,7 @@ class API {
 
     async fetchEducation() {
         try {
-            const response = await fetch(`${API_BASE}/education`);
+            const response = await fetch(`${DATA_PATH}/education.json`);
             if (!response.ok) throw new Error('Failed to fetch education');
             return await response.json();
         } catch (error) {
@@ -41,7 +41,7 @@ class API {
 
     async fetchSkills() {
         try {
-            const response = await fetch(`${API_BASE}/skills`);
+            const response = await fetch(`${DATA_PATH}/skills.json`);
             if (!response.ok) throw new Error('Failed to fetch skills');
             return await response.json();
         } catch (error) {
@@ -52,7 +52,7 @@ class API {
 
     async fetchCertificates() {
         try {
-            const response = await fetch(`${API_BASE}/certificates`);
+            const response = await fetch(`${DATA_PATH}/certificates.json`);
             if (!response.ok) throw new Error('Failed to fetch certificates');
             return await response.json();
         } catch (error) {
@@ -63,7 +63,7 @@ class API {
 
     async fetchProjects() {
         try {
-            const response = await fetch(`${API_BASE}/projects`);
+            const response = await fetch(`${DATA_PATH}/projects.json`);
             if (!response.ok) throw new Error('Failed to fetch projects');
             return await response.json();
         } catch (error) {
